@@ -12,7 +12,11 @@
  
 p{
     font-size: 14px;
-    font-weight: bold;
+    margin-bottom: 0.6rem;
+
+}
+.mkd-text {
+      color: #FE2968;
 }
 a {
       text-decoration: none;
@@ -49,8 +53,25 @@ a {
       border: 1px solid  #FE2968;
       background: #FE2968;
 }
-
+.mkd-btn-inactive {
+      border: 1px solid  #FE2968;
+      color: #FE2968;
+}
+.mkd-btn-inactive:hover {
+      background: #FE2968;
+      color: white;
+}
 /* /.buttons */
+
+/* =========================
+  Cards
+  ==================== */
+
+ .mkd-card:hover {
+       box-shadow: 9px 4px 9px 6px #f7f7f7;
+ }
+
+  /* /.cards */
 
 /* ____________
 
@@ -79,7 +100,18 @@ _______________ */
 /* artist card showcase */
 .mkd-card img {
       height: 15rem;
-      width: 16rem;
+      width: 100%
+      border-top-left-radius: .2rem;
+      border-top-right-radius: .2rem;
+
+}
+.mkd-card {
+      box-shadow: 1px 1px 1px 2px #f7f7f7fc;
+      border: none;
+}
+.mkd-card-footer{
+      background-color: white;
+
 }
 
 .star-icons i, .benefits i {
@@ -95,16 +127,12 @@ _______________ */
 /* ---------user-benefit------- */
 
 .user-benefit {
-      padding: 1% 5% 1% 8.69%;
+      padding: 1%  8.69%;
 
       background: #f7f7f7b0;
 }
 
-.user-benefit  img{
-      height: 12em;
-      width: 16.1em;
-      /* padding: 5px; */
-}
+
 
 .user-benefit ul li {
       list-style: none;
@@ -119,7 +147,7 @@ _______________ */
 
 .showcase-area img {
       height: 15em;
-      width: 16.1em;
+      width: 100%;
     
 }
 
@@ -178,127 +206,28 @@ ___________*/
 
 
 
-.hovereffect {
-      width: 100%;
-      height: 100%;
-      float: left;
-      overflow: hidden;
-      position: relative;
-      text-align: center;
-      cursor: default;
-  }
-  .hovereffect .overlay {
-      width: 100%;
-      position: absolute;
-      overflow: hidden;
+
+
+  /* ======================================
+           Pre Loader
+      ====================================== */
+
+/* #preloader {
+      background: coral;
+      position: fixed;
+      top: 0;
+      bottom: 0;
       left: 0;
-        top: auto;
-        bottom: 0;
-        padding: 1em;
-        height: 4.75em;
-        background: #79FAC4;
-        color: #3c4a50;
-        -webkit-transition: -webkit-transform 0.35s;
-        transition: transform 0.35s;
-        -webkit-transform: translate3d(0,100%,0);
-        transform: translate3d(0,100%,0);
-        visibility: hidden;
-  
-  }
-  
-  .hovereffect img {
-      display: block;
-      position: relative;
-        -webkit-transition: -webkit-transform 0.35s;
-        transition: transform 0.35s;
-  }
-  
-  .hovereffect:hover img {
-  -webkit-transform: translate3d(0,-10%,0);
-        transform: translate3d(0,-10%,0);
-  }
-  
-  .hovereffect h2 {
-      text-transform: uppercase;
-      color: #fff;
-      text-align: center;
-      position: relative;
-      font-size: 17px;
-      padding: 10px;
-      background: rgba(0, 0, 0, 0.6);
-        float: left;
-        margin: 0px;
-        display: inline-block;
-  }
-  
-  .hovereffect a.info {
-      display: inline-block;
-      text-decoration: none;
-      padding: 7px 14px;
-      text-transform: uppercase;
-        color: #fff;
-        border: 1px solid #fff;
-        margin: 50px 0 0 0;
-        background-color: transparent;
-  }
-  .hovereffect a.info:hover {
-      box-shadow: 0 0 5px #fff;
-  }
-  
-  
-  .hovereffect p.icon-links a {
-        float: right;
-        color: #3c4a50;
-        font-size: 1.4em;
-  }
-  
-  .hovereffect:hover p.icon-links a:hover,
-  .hovereffect:hover p.icon-links a:focus {
-        color: #252d31;
-  }
-  
-  .hovereffect h2,
-  .hovereffect p.icon-links a {
-        -webkit-transition: -webkit-transform 0.35s;
-        transition: transform 0.35s;
-        -webkit-transform: translate3d(0,200%,0);
-        transform: translate3d(0,200%,0);
-        visibility: visible;
-  }
-  
-  .hovereffect p.icon-links a span:before {
-        display: inline-block;
-        padding: 8px 10px;
-        speak: none;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-  }
-  
-  
-  .hovereffect:hover .overlay,
-  .hovereffect:hover h2,
-  .hovereffect:hover p.icon-links a {
-        -webkit-transform: translate3d(0,0,0);
-        transform: translate3d(0,0,0);
-  }
-  
-  .hovereffect:hover h2 {
-        -webkit-transition-delay: 0.05s;
-        transition-delay: 0.05s;
-  }
-  
-  .hovereffect:hover p.icon-links a:nth-child(3) {
-        -webkit-transition-delay: 0.1s;
-        transition-delay: 0.1s;
-  }
-  
-  .hovereffect:hover p.icon-links a:nth-child(2) {
-        -webkit-transition-delay: 0.15s;
-        transition-delay: 0.15s;
-  }
-  
-  .hovereffect:hover p.icon-links a:first-child {
-        -webkit-transition-delay: 0.2s;
-        transition-delay: 0.2s;
-  }
-  
+      right: 0;
+      z-index: 99999;
+}
+
+#status {
+      background: darkblue;
+      background-repeat: no-repeat;
+      height: 50px;
+      width: 50px;
+      position: absolute;
+      top: 40vh;
+      left: 45vw;
+} */
