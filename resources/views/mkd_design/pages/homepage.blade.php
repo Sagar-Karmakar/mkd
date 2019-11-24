@@ -1,11 +1,7 @@
 @extends('mkd_design.layouts.mkd-layout')
 @section('content')
 
-{{-- <div id="preloader">
-      <div id="status">&nbsp; </div>
-</div> --}}
 
-@include('mkd_design.include.bars.navbar')
 
 
             <!-- hero banner -->
@@ -14,13 +10,13 @@
             
                <div class="heading-action">
                <div class="banner-heading text-white">
-                        <h3>Lorem ipsum dolor sit amet consectetur.</h3>
+                        <h4>Choose your best make up artist. By view their work profile in <a href="/">MakeUP Dunia</a> </h4>
                         <!-- <hr class="white-hr"> -->
-                     <h6 class="text-left">We offer professional-grade, self-paced courses to help developers stay on top of their craft.</h6>
+                     <h6 class="text-left">Your tension-free glamorous look is just two steps ahead</h6>
                </div>
                <!-- /.heading -->
                <div class="buttons">
-                  <a href="#" class="btn text-white mt-4 mr-3 mkd-btn mkd-btn-active">BROWSES</a>
+                  <a href="#" class="btn text-white mt-4 mr-3 mkd-btn mkd-btn-active">Join us now</a>
                      
                </div>
                <!-- /.buttons -->
@@ -35,11 +31,11 @@
 
             <div class="container-fluid showcase-artists mb-4">
                   <div class="showcase-heading text-left my-4">
-                        <h3 class="mb-3">Join a global cohort of <strong>4000+ students</strong> </h3>
+                        <h3 class="mb-3">Best rated make up artists here</h3>
                         <!-- <hr> -->
                         <div class="clearfix">
                               <div class="float-left">
-                              <h6>Students in our classes are Engineers at:</h6>
+                              <h6>Watch, Think and choose your artist for your best attractive look.</h6>
                               </div>
                               <div class="float-right">
                               <span class="badge badge-success">View more</span>
@@ -57,7 +53,7 @@
                       <div class="card mkd-card">
                       
                         
-                         <img class="img-responsive" class="card-img-top" src="{{asset('mkd_design/assets/img/adult-attractive-beautiful-457701.jpg')}}" alt="">
+                         <img class="img-responsive rounded" class="card-img-top " src="{{asset('mkd_design/assets/img/adult-attractive-beautiful-457701.jpg')}}" alt="">
                          <div class="card-footer mkd-card-footer">
                               <p class="p-0">Artist : <span><a href="#">Arpita Manna</a></span></p>
                               <h6 class="">Bridal makeup, party makeUp</h6>
@@ -93,7 +89,7 @@
                      <div class="card mkd-card ">
                       
                         
-                         <img class="img-responsive" class="card-img-top" src="{{asset('mkd_design/assets/img/adult-attractive-beautiful-457701.jpg')}}"  class="img-responsive"  alt="">
+                         <img class="img-responsive rounded" class="card-img-top " src="{{asset('mkd_design/assets/img/adult-attractive-beautiful-457701.jpg')}}"  class="img-responsive rounded"  alt="">
                       
                          <div class="card-footer mkd-card-footer">
                               <p class="p-0">Artist : <span><a href="#">Arpita Manna</a></span></p>
@@ -131,7 +127,7 @@
                      <div class="card mkd-card">
                       
                         
-                         <img class="img-responsive"  class="card-img-top"  src="{{asset('mkd_design/assets/img/adult-attractive-beautiful-457701.jpg')}}" class=" img-responsive"  alt="">
+                         <img class="img-responsive rounded"  class="card-img-top "  src="{{asset('mkd_design/assets/img/adult-attractive-beautiful-457701.jpg')}}" class=" img-responsive rounded"  alt="">
                          <div class="card-footer mkd-card-footer">
                               <p class="p-0">Artist : <span><a href="#">Arpita Manna</a></span></p>
                               <h6 class="">Bridal makeup, party makeUp</h6>
@@ -168,7 +164,7 @@
                      <div class="card mkd-card">
                       
                         
-                         <img class="img-responsive" class="card-img-top"  src="{{asset('mkd_design/assets/img/adult-attractive-beautiful-457701.jpg')}}" class=" img-responsive"  alt="">
+                         <img class="img-responsive rounded" class="card-img-top "  src="{{asset('mkd_design/assets/img/adult-attractive-beautiful-457701.jpg')}}" class=" img-responsive rounded"  alt="">
                         
                          <div class="card-footer mkd-card-footer">
                            <p class="p-0">Artist : <span><a href="#">Arpita Manna</a></span></p>
@@ -212,7 +208,7 @@
                               <div class="card mkd-card">
                               
                               
-                              <img class="img-responsive" class="card-img-top" src="{{asset('mkd_design/assets/img/adult-attractive-beautiful-457701.jpg')}}" alt="">
+                              <img class="img-responsive rounded" class="card-img-top " src="{{asset('mkd_design/assets/img/adult-attractive-beautiful-457701.jpg')}}" alt="">
                               <div class="card-footer mkd-card-footer">
                                     <p class="p-0">Artist : <span><a href="#">Arpita Manna</a></span></p>
                                     <h6 class="">Bridal makeup, party makeUp</h6>
@@ -252,7 +248,7 @@
                               <div class="card mkd-card ">
                               
                               
-                              <img class="img-responsive" class="card-img-top" src="{{asset('mkd_design/assets/img/adult-attractive-beautiful-457701.jpg')}}"  class="img-responsive"  alt="">
+                              <img class="img-responsive rounded" class="card-img-top " src="{{asset('mkd_design/assets/img/adult-attractive-beautiful-457701.jpg')}}"  class="img-responsive rounded"  alt="">
                               
                               <div class="card-footer mkd-card-footer">
                                     <p class="p-0">Artist : <span><a href="#">Arpita Manna</a></span></p>
@@ -290,7 +286,7 @@
                               <div class="card mkd-card">
                               
                               
-                              <img class="img-responsive"  class="card-img-top"  src="{{asset('mkd_design/assets/img/adult-attractive-beautiful-457701.jpg')}}" class=" img-responsive"  alt="">
+                              <img class="img-responsive rounded"  class="card-img-top "  src="{{asset('mkd_design/assets/img/adult-attractive-beautiful-457701.jpg')}}" class=" img-responsive rounded"  alt="">
                               <div class="card-footer mkd-card-footer">
                                     <p class="p-0">Artist : <span><a href="#">Arpita Manna</a></span></p>
                                     <h6 class="">Bridal makeup, party makeUp</h6>
@@ -327,7 +323,7 @@
                               <div class="card mkd-card">
                               
                               
-                              <img class="img-responsive" class="card-img-top"  src="{{asset('mkd_design/assets/img/adult-attractive-beautiful-457701.jpg')}}" class=" img-responsive"  alt="">
+                              <img class="img-responsive rounded" class="card-img-top "  src="{{asset('mkd_design/assets/img/adult-attractive-beautiful-457701.jpg')}}" class=" img-responsive rounded"  alt="">
                               
                               <div class="card-footer mkd-card-footer">
                                     <p class="p-0">Artist : <span><a href="#">Arpita Manna</a></span></p>
@@ -382,30 +378,30 @@
                   <li class="mb-4 ">
                         <h4>
                         
-                        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, alias.</span>
+                        <span>Why MakeUp Dunia?</span>
                         </h4>
                   </li>
               
                    <li>
                       <p>
                       <i class="far fa-check-circle"></i>
-                      <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, alias.</span>
+                      <span>Your choice matters. You can choose from top artists. </span>
                       </p>
                    </li>
                    <li>
                       <p>
                       <i class="far fa-check-circle"></i>
-                      <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, alias.</span>
+                      <span>You can choose artist by watching their work profile</span>
                       </p>
                    </li>
 
                    <li>
                       <p>
                       <i class="far fa-check-circle"></i>
-                      <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, alias.</span>
+                      <span>You can contact a artist for furthur details</span>
                       </p>
                    </li>
-                   <li>
+                   {{-- <li>
                       <p>
                       <i class="far fa-check-circle"></i>
                       <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, alias.</span>
@@ -422,7 +418,7 @@
                       <i class="far fa-check-circle"></i>
                       <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, alias.</span>
                       </p>
-                   </li>
+                   </li> --}}
                    <li>
                          <a href="#" class="btn  mkd-btn-inactive  mt-3 ">View More</a>
                    </li>
@@ -479,22 +475,19 @@
       <div class="container-fluid showcase-area">
             <div class="row mb-4">
                   <div class="col-md-3">
-                        <img class="img-responsive" src="{{asset('mkd_design/assets/img/adult-attractive-beautiful-457701.jpg')}}" alt="">
-                        <div class="carousel-caption mt-3">
-                                    <p>Example headline.</p>
-                                  </div>
-    
+                        <img class="img-responsive rounded" src="{{asset('mkd_design/assets/img/adult-attractive-beautiful-457701.jpg')}}" alt="">
+                        
                   </div>
                   <div class="col-md-3">
-                        <img class="img-responsive" src="{{asset('mkd_design/assets/img/adult-attractive-beautiful-457701.jpg')}}" alt="">
+                        <img class="img-responsive rounded" src="{{asset('mkd_design/assets/img/adult-attractive-beautiful-457701.jpg')}}" alt="">
       
                   </div>
                   <div class="col-md-3">
-                        <img class="img-responsive" src="{{asset('mkd_design/assets/img/adult-attractive-beautiful-457701.jpg')}}" alt="">
+                        <img class="img-responsive rounded" src="{{asset('mkd_design/assets/img/adult-attractive-beautiful-457701.jpg')}}" alt="">
       
                   </div>
                   <div class="col-md-3">
-                        <img class="img-responsive" src="{{asset('mkd_design/assets/img/adult-attractive-beautiful-457701.jpg')}}" alt="">
+                        <img class="img-responsive rounded" src="{{asset('mkd_design/assets/img/adult-attractive-beautiful-457701.jpg')}}" alt="">
       
                   </div>
                
@@ -503,24 +496,19 @@
             </div>
             <div class="row">
                         <div class="col-md-3">
-                              <img class="img-responsive" src="{{asset('mkd_design/assets/img/adult-attractive-beautiful-457701.jpg')}}" alt="">
+                              <img class="img-responsive rounded" src="{{asset('mkd_design/assets/img/adult-attractive-beautiful-457701.jpg')}}" alt="">
           
                         </div>
                         <div class="col-md-3">
-                              <img class="img-responsive" src="{{asset('mkd_design/assets/img/adult-attractive-beautiful-457701.jpg')}}" alt="">
+                              <img class="img-responsive rounded" src="{{asset('mkd_design/assets/img/adult-attractive-beautiful-457701.jpg')}}" alt="">
             
                         </div>
                         <div class="col-md-3">
-                              <img class="img-responsive" src="{{asset('mkd_design/assets/img/adult-attractive-beautiful-457701.jpg')}}" alt="">
+                              <img class="img-responsive rounded" src="{{asset('mkd_design/assets/img/adult-attractive-beautiful-457701.jpg')}}" alt="">
             
                         </div>
                         <div class="col-md-3 hovereffect">
-                              <img class="img-responsive" src="{{asset('mkd_design/assets/img/adult-attractive-beautiful-457701.jpg')}}" alt="">
-                              <div class="overlay">
-                                          <h2>Effect 10</h2>
-                                          
-                                      </div>
-            
+                              <img class="img-responsive rounded" src="{{asset('mkd_design/assets/img/adult-attractive-beautiful-457701.jpg')}}" alt="">
                         </div>
                      
                   

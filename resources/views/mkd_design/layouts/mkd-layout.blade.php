@@ -9,6 +9,8 @@
 
 </head>
 
+@include('mkd_design.include.bars.navbar')
+
 
 
 
@@ -16,10 +18,6 @@
 
 
 @include('mkd_design.include.bars.footer')
-
-
-<!-- </div> -->
-
 
 
 

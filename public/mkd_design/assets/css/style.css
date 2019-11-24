@@ -4,11 +4,17 @@
       box-sizing: border-box;
 }
 
+body {
+      color: rgb(61, 60, 60);
+}
+
 
 
 /*_______________
     Fonts 
     _________________*/
+
+    
  
 p{
     font-size: 14px;
@@ -23,6 +29,16 @@ a {
       color: #FE2968;
 }
 
+i {
+      /* color: #FE2968; */
+}
+.light-text {
+      color: #8a88889c;
+}
+.vertical-line {
+      border-right: 1px solid #a7a6a69c;
+}
+
 /* /.fonts */
 
 
@@ -30,10 +46,10 @@ a {
         Navbar
  ___________________________________________*/
 .mkd-navbar {
-      /* background : rgb(253, 253, 253); */
+      background : rgb(253, 253, 253);
       color: black;
 
-      padding: 1% 8.69%;
+      /* padding: 1% 8.69%; */
 
 }
 .mkd-logo img {
@@ -57,9 +73,14 @@ a {
       border: 1px solid  #FE2968;
       color: #FE2968;
 }
-.mkd-btn-inactive:hover {
+.mkd-btn-inactive:hover{
       background: #FE2968;
       color: white;
+}
+
+.mkd-btn-inactive i:hover {
+      color: white;
+
 }
 /* /.buttons */
 
@@ -159,6 +180,28 @@ _______________ */
 _______________ */
 
 /* ____________
+
+      Artist Profile
+_______________ */
+
+.artist-banner {
+      height: 20.71em;
+}
+
+.artist-img {
+      /* height: 20em; */
+      /* width: 100%; */
+      /* border-radius: 100%; */
+}
+
+/* ____________
+
+     Artist Profile END
+_______________ */
+
+/* .artist-banner */
+
+/* ____________
      Footer
 ___________*/
 
@@ -168,14 +211,14 @@ ___________*/
       
 }
 
-@media(min-width: 700px){
-      #navbar-mkd {
-            /* background : #FE2968; */
-            /* padding: .5em 5em; */
+@media(min-width: 768px){
+      .mkd-navbar {
+            padding: 1% 8.69%;
+      
       }
       .heading-action {
             width: 35em;
-            margin: 10% 7.69%;
+            margin: 15% 7.69%;
 
       }
       .showcase-artists {
@@ -184,9 +227,23 @@ ___________*/
       
       }
 
+      /* ==============
+          Artist  Profile
+       ============== */
+
+       .mkd-artist-profile {
+            padding: 1% 8.69%;
+       }
+
 }
 
-@media(max-width: 700px){
+@media(max-width: 769px){
+     
+      .main-page-banner {
+            height: 40vh; 
+            
+      }
+
       .showcase-artists {
             padding: 1em;
       

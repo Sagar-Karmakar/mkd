@@ -14,3 +14,9 @@
 Route::get('/', function () {
     return view('mkd_design.pages.homepage');
 });
+
+
+// Artist profilr blade
+Route::get('/profile', function () {
+    return view('mkd_design.pages.artist.artist-profile');
+});
