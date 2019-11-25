@@ -20,3 +20,7 @@ Route::get('/', function () {
 Route::get('/profile', function () {
     return view('mkd_design.pages.artist.artist-profile');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
