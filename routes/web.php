@@ -21,6 +21,14 @@ Route::get('/profile', function () {
     return view('mkd_design.pages.artist.artist-profile');
 });
 
+// Artist list blade
+Route::get('/list', function () {
+    return view('mkd_design.pages.artist.artist-showcase');
+});
+
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+

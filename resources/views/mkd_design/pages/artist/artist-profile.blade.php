@@ -35,8 +35,8 @@
                               
                               {{-- book and messege --}}
                               <div class="d-flex flex-row mt-2">
-                                          <a href="#" class="btn px-4 mr-4 text-white mkd-btn mkd-btn-active mr-2">Book now</a>
-                                          <a href="#" class="btn px-4 mr-4 mkd-btn-inactive ">Messege</a>
+                                          <a href="#" class="btn px-xm-2 px-lg-4 mr-4 text-white mkd-btn mkd-btn-active mr-2">Book now</a>
+                                          <a href="#" class="btn px-xm-2 px-lg-4 mr-4 mkd-btn-inactive ">Messege</a>
                                           <a href="#"><h3><i class="fa fa-share-alt light-text" aria-hidden="true"></i></h3></a>
                                     
                               </div>
@@ -97,17 +97,19 @@
 
                         <div class="card-body">
                                     <div class="d-flex flex-row mt-2">
-                                          <div class="about px-4 vertical-line">
-                                                <h6>About</h6>
+                                          <div class="about pr-2  px-lg-4 vertical-line">
+                                                <p class="font-weight-bold">About</p>
                                           </div>
-                                          <div class="about px-4 vertical-line">
-                                                <h6>Albums</h6>
+                                         
+                                          <div class="about px-2 px-lg-4 vertical-line">
+                                                <p class="font-weight-bold">Reviews</p>
                                           </div>
-                                          <div class="about px-4 vertical-line">
-                                                <h6>Write a review</h6>
+                                          <div class="about pl-2 px-lg-4 ">
+                                                <p class="font-weight-bold">Add to favourites <i class="far fa-heart mkd-text pl-2"></i></p>
                                           </div>
-                                                      
+                                                            
                                     </div>
+                                    {{-- /.flex --}}
 
                         </div>
 
@@ -116,50 +118,81 @@
                   {{-- card --}}
 
                   <div class="card gallery mt-4">
-                              <div class="row ">
-                                    <div class="col-md-4">  
-                                         <img class="img-fluid" src="{{asset('mkd_design/assets/img/adult-attractive-beautiful-457701.jpg')}}" alt="">
-                                         
-                                         <img class="img-fluid"  src="{{asset('mkd_design/assets/img/model.jpg')}}" alt="">
 
+                              <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                                          <li class="nav-item">
+                                            <a class="nav-link active" id="pills-all-photos-tab" data-toggle="pill" href="#pills-all-photos" role="tab" aria-controls="pills-all-photos" aria-selected="true">All Photos</a>
+                                          </li>
+                                          <li class="nav-item">
+                                            <a class="nav-link" id="pills-albums-tab" data-toggle="pill" href="#pills-albums" role="tab" aria-controls="pills-albums" aria-selected="false">Albums</a>
+                                          </li>
+                                          <li class="nav-item">
+                                            <a class="nav-link" id="pills-video-tab" data-toggle="pill" href="#pills-video" role="tab" aria-controls="pills-video" aria-selected="false">Videos</a>
+                                          </li>
+                                        </ul>
+                        <div class="tab-content" id="pills-tabContent">
+                                         
+                                          
+                                          
+                          <div class="tab-pane fade show active" id="pills-all-photos" role="tabpanel" aria-labelledby="pills-all-photos-tab">
+                              <div class="row ">
+                                    <div class="col-4">  
+                                         <img class="img-fluid profile-gallery-img" src="{{asset('mkd_design/assets/img/adult-attractive-beautiful-457701.jpg')}}" alt="">
+                                         
+                                        
 
                                     </div>
-                                    <div class="col-md-4">
-                                          <img class="img-fluid"  src="{{asset('mkd_design/assets/img/model.jpg')}}" alt="">
+                                    <div class="col-4">
+                                          <img class="img-fluid profile-gallery-img"  src="{{asset('mkd_design/assets/img/model.jpg')}}" alt="">
 
                                           
                                     </div>
-                                    <div class="col-md-4">
-                                          <img class="img-fluid"  src="{{asset('mkd_design/assets/img/adult-attractive-beautiful-457701.jpg')}}" alt="">
+                                    <div class="col-4">
+                                          <img class="img-fluid profile-gallery-img"  src="{{asset('mkd_design/assets/img/adult-attractive-beautiful-457701.jpg')}}" alt="">
 
                                           
                                     </div>
                   
 
-                              </div>
-                              <div class="row ">
-                                          <div class="col-md-4">
-                                                <img class="img-fluid"  src="{{asset('mkd_design/assets/img/banner.jpg')}}" alt="">
+                                    </div>
+                                    <div class="row ">
+                                          <div class="col-4">
+                                                <img class="img-fluid profile-gallery-img"  src="{{asset('mkd_design/assets/img/banner.jpg')}}" alt="">
       
                                                 
                                           </div>
-                                          <div class="col-md-4">  
-                                                      <img class="img-fluid"  src="{{asset('mkd_design/assets/img/adult-attractive-beautiful-457701.jpg')}}" alt="">
+                                          <div class="col-4">  
+                                                      <img class="img-fluid profile-gallery-img"  src="{{asset('mkd_design/assets/img/adult-attractive-beautiful-457701.jpg')}}" alt="">
              
              
              
                                           </div>
        
-                                          <div class="col-md-4">
-                                                <img class="img-fluid"  src="{{asset('mkd_design/assets/img/banner.jpg')}}" alt="">
+                                          <div class="col-4">
+                                                <img class="img-fluid profile-gallery-img"  src="{{asset('mkd_design/assets/img/banner.jpg')}}" alt="">
       
                                                 
                                           </div>
+
                         
       
                                     </div>
+                                    {{-- /.row --}}
+                              </div>
+                              {{-- /.pill --}}
+                              <div class="tab-pane fade" id="pills-albums" role="tabpanel" aria-labelledby="pills-albums-tab">...</div>
+                              {{-- /.pill --}}
+                              <div class="tab-pane fade" id="pills-video" role="tabpanel" aria-labelledby="pills-video-tab">...</div>
+                        </div>
+                        {{-- nav pills end  --}}
+                                    <div class="text-center">
+                                                <a href="#"><h6>View More <i class="far fa-arrow-alt-circle-down pl-1"></i></h6></a>
+                                    </div>
+
                         
+                             
                   </div>
+                  {{-- /.card --}}
                   
             </div>
             {{-- /.col --}}

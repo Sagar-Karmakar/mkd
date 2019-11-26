@@ -194,6 +194,12 @@ _______________ */
       /* border-radius: 100%; */
 }
 
+.profile-gallery-img {
+      height: 14em;
+      width: 14em; 
+      padding-bottom: 14%;
+}
+
 /* ____________
 
      Artist Profile END
@@ -231,7 +237,7 @@ ___________*/
           Artist  Profile
        ============== */
 
-       .mkd-artist-profile {
+       .mkd-artist-profile, .artist-list {
             padding: 1% 8.69%;
        }
 
