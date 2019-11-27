@@ -37,8 +37,9 @@ Route::get('/all/login', function () {
 });
 
 
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
 
 
+Route::get('/register', 'Users\AuthController@RegistrationIndex')->name('user.register.index');
+Route::post('/register', 'Users\AuthController@RegistrationSubmit')->name('user.register.submit');
+Route::get('/login', 'Users\AuthController@LoginIndex')->name('user.login.index');
+Route::post('/login', 'Users\AuthController@LoginSubmit')->name('user.login.submit');
