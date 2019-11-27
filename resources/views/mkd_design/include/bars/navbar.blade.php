@@ -14,10 +14,12 @@
             </form>
           <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
 
-          <a class="nav-item nav-link" href="#">Artist</a>
+          <a class="nav-item nav-link" href="artist-showcase">Artist</a>
 
-          <a class="nav-item nav-link" href="#">Artist</a>
+          {{-- <a class="nav-item nav-link" href="#">Artist</a> --}}
           <a class="nav-item nav-link" href="#">Blog</a>
+          <a class="nav-item nav-link" href="/signup">Login/Sign Up</a>
+
         </div>
       </div>
  

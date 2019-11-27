@@ -27,6 +27,16 @@ Route::get('/list', function () {
 });
 
 
+// Sign Up
+Route::get('/signup', function () {
+    return view('mkd_design.pages.artist.signup');
+});
+
+Route::get('/all/login', function () {
+    return view('mkd_design.pages.artist.login');
+});
+
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

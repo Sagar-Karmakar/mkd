@@ -241,6 +241,17 @@ ___________*/
             padding: 1% 8.69%;
        }
 
+      /* ==============
+          Sign Up
+       ============== */
+
+
+       .signup-centered-card {
+             width: 26rem;
+             margin: 2rem auto;
+
+       }
+
 }
 
 @media(max-width: 769px){
