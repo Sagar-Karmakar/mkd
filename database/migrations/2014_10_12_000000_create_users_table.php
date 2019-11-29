@@ -21,7 +21,7 @@ class CreateUsersTable extends Migration
             $table->bigInteger('phone_number')->nullable();
             $table->string('account_type');
             $table->string('profile_picture');
-            $table->string('cover_picture')->nullable();
+            $table->string('cover_picture');
             $table->string('gender');
             $table->string('location')->nullable();
             $table->string('prefer_area')->nullable();
@@ -30,6 +30,7 @@ class CreateUsersTable extends Migration
             $table->text('about')->nullable();
             $table->text('makeup_type')->nullable();
             $table->text('product_info')->nullable();
+            $table->text('website')->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->rememberToken();
             $table->timestamps();
