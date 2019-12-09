@@ -21,10 +21,25 @@ Route::get('/profile', function () {
     return view('mkd_design.pages.artist.artist-profile');
 });
 
+Route::get('/profile/edit', function () {
+      return view('mkd_design.pages.artist.artist-profile-edit');
+  });
+  
+
 // Artist list blade
 Route::get('/list', function () {
     return view('mkd_design.pages.artist.artist-showcase');
 });
+
+// Artist login blade
+Route::get('/login', function () {
+    return view('mkd_design.pages.login');
+});
+
+// Artist login blade
+// Route::get('/password/change', function () {
+//     return view('mkd_design.pages.artist.changePassword');
+// });
 
 
 Route::get('/register', 'Users\AuthController@RegistrationIndex')->name('register.index');

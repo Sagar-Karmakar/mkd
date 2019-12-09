@@ -55,7 +55,7 @@
                                     <div class="card mkd-card">
                       
                         
-                                    <img class="img-responsive rounded" class="card-img-top " src="{{asset('mkd_design/assets/img/adult-attractive-beautiful-457701.jpg')}}" alt="">
+                                    <img class="img-responsive rounded" class="card-img-top " src="{{asset('mkd_design/assets/images/adult-attractive-beautiful-457701.jpg')}}" alt="">
                                     <div class="card-footer mkd-card-footer">
                                           <p class="p-0">Artist : <span><a href="#">Arpita Manna</a></span></p>
                                           <h6 class="">Bridal makeup, party makeUp</h6>
@@ -90,7 +90,7 @@
                                     <div class="card mkd-card">
                   
                   
-                                                <img class="img-responsive rounded" class="card-img-top " src="{{asset('mkd_design/assets/img/adult-attractive-beautiful-457701.jpg')}}" alt="">
+                                                <img class="img-responsive rounded" class="card-img-top " src="{{asset('mkd_design/assets/images/adult-attractive-beautiful-457701.jpg')}}" alt="">
                                                 <div class="card-footer mkd-card-footer">
                                                       <p class="p-0">Artist : <span><a href="#">Arpita Manna</a></span></p>
                                                       <h6 class="">Bridal makeup, party makeUp</h6>
@@ -124,7 +124,7 @@
                                    <div class="card mkd-card">
                       
                         
-                                    <img class="img-responsive rounded" class="card-img-top " src="{{asset('mkd_design/assets/img/adult-attractive-beautiful-457701.jpg')}}" alt="">
+                                    <img class="img-responsive rounded" class="card-img-top " src="{{asset('mkd_design/assets/images/adult-attractive-beautiful-457701.jpg')}}" alt="">
                                     <div class="card-footer mkd-card-footer">
                                           <p class="p-0">Artist : <span><a href="#">Arpita Manna</a></span></p>
                                           <h6 class="">Bridal makeup, party makeUp</h6>

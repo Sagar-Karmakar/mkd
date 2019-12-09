@@ -1,13 +1,18 @@
 @extends('mkd_design.layouts.mkd-layout')
 @section('content')
 
+{{-- @include('mkd_design.include.modals.picture-change-modal') --}}
+
 
 <div class="container-fluid my-4 mkd-artist-profile">
+
       <div class="row">
             <div class="col-md-4">
                   <div class="card mb-4">
                         <div class="card-img-top">
-                                    <img class="img-responsive img-fluid artist-img" class="card-img-top" src="{{asset('mkd_design/assets/img/banner.jpg')}}" alt="">
+                                    <img class="img-responsive img-fluid artist-img" class="card-img-top" src="{{asset('mkd_design/assets/images/banner.jpg')}}" alt="">
+                                    <a href="#" class="change-picture-link px-2"  data-toggle="modal" data-target="#pictureChange">Edit <i class="fas fa-edit"></i></a>
+
                               </div>
                         <div class="card-body">
                               <div class="clearfix">
@@ -93,7 +98,9 @@
             <div class="col-md-8">
 
                   <div class="card mb-4">
-                        <img class="img-fluid card-img-top artist-banner" src="{{asset('mkd_design/assets/img/banner.jpg')}}" alt="">
+                        <img class="img-fluid card-img-top artist-banner" src="{{asset('mkd_design/assets/images/banner.jpg')}}" alt="">
+                        <a href="#" class="change-cover-picture-link px-2" data-toggle="modal" data-target="#pictureChange">Edit <i class="fas fa-edit"></i></a>
+
 
                         <div class="card-body">
                                     <div class="d-flex flex-row mt-2">
@@ -137,39 +144,42 @@
                           <div class="tab-pane fade show active" id="pills-all-photos" role="tabpanel" aria-labelledby="pills-all-photos-tab">
                               <div class="row ">
                                     <div class="col-4">  
-                                         <img class="img-fluid profile-gallery-img" src="{{asset('mkd_design/assets/img/adult-attractive-beautiful-457701.jpg')}}" alt="">
+                                         <a href="mkd_design/assets/images/adult-attractive-beautiful-457701.jpg" data-lightbox="artist-gallery" data-title="This is model" ><img class="img-fluid profile-gallery-img" src="{{asset('mkd_design/assets/images/adult-attractive-beautiful-457701.jpg')}}" alt=""></a>
                                          
                                         
 
                                     </div>
                                     <div class="col-4">
-                                          <img class="img-fluid profile-gallery-img"  src="{{asset('mkd_design/assets/img/model.jpg')}}" alt="">
+                                          <a href="mkd_design/assets/images/model.jpg" data-lightbox="artist-gallery" ><img class="img-fluid profile-gallery-img"  src="{{asset('mkd_design/assets/images/model.jpg')}}" alt=""></a>
 
                                           
                                     </div>
                                     <div class="col-4">
-                                          <img class="img-fluid profile-gallery-img"  src="{{asset('mkd_design/assets/img/adult-attractive-beautiful-457701.jpg')}}" alt="">
+                                          <a href="mkd_design/assets/images/adult-attractive-beautiful-457701.jpg" data-lightbox="artist-gallery" ><img class="img-fluid profile-gallery-img"  src="{{asset('mkd_design/assets/images/adult-attractive-beautiful-457701.jpg')}}" alt=""></a>
 
                                           
                                     </div>
                   
 
                                     </div>
+                                    {{-- /.row --}}
+
+
                                     <div class="row ">
                                           <div class="col-4">
-                                                <img class="img-fluid profile-gallery-img"  src="{{asset('mkd_design/assets/img/banner.jpg')}}" alt="">
+                                                <a href="mkd_design/assets/images/banner.jpg" data-lightbox="artist-gallery" ><img class="img-fluid profile-gallery-img"  src="{{asset('mkd_design/assets/images/banner.jpg')}}" alt=""></a>
       
                                                 
                                           </div>
                                           <div class="col-4">  
-                                                      <img class="img-fluid profile-gallery-img"  src="{{asset('mkd_design/assets/img/adult-attractive-beautiful-457701.jpg')}}" alt="">
+                                                <a href="mkd_design/assets/images/adult-attractive-beautiful-457701.jpg" data-lightbox="artist-gallery" ><img class="img-fluid profile-gallery-img"  src="{{asset('mkd_design/assets/images/adult-attractive-beautiful-457701.jpg')}}" alt=""></a>
              
              
              
                                           </div>
        
                                           <div class="col-4">
-                                                <img class="img-fluid profile-gallery-img"  src="{{asset('mkd_design/assets/img/banner.jpg')}}" alt="">
+                                                <a href="mkd_design/assets/images/banner.jpg" data-lightbox="artist-gallery" ><img class="img-fluid profile-gallery-img"  src="{{asset('mkd_design/assets/images/banner.jpg')}}" alt=""></a>
       
                                                 
                                           </div>
@@ -199,6 +209,8 @@
 
       </div>
       {{-- /.row --}}
+
+      
 </div>
 {{-- /.container --}}
 
