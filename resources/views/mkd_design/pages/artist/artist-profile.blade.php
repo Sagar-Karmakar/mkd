@@ -26,7 +26,7 @@
                                           {{-- Degree --}}
                                           <p><strong> Bsc in MakeUp</strong></p>
 
-                                          
+
 
                                     </div>
                                     <div class="float-right">
@@ -37,13 +37,13 @@
 
                                     </div>
                               </div>
-                              
+
                               {{-- book and messege --}}
                               <div class="d-flex flex-row mt-2">
                                           <a href="#" class="btn px-xm-2 px-lg-4 mr-4 text-white mkd-btn mkd-btn-active mr-2">Book now</a>
                                           <a href="#" class="btn px-xm-2 px-lg-4 mr-4 mkd-btn-inactive ">Messege</a>
                                           <a href="#"><h3><i class="fa fa-share-alt light-text" aria-hidden="true"></i></h3></a>
-                                    
+
                               </div>
                         </div>
                   </div>
@@ -59,7 +59,7 @@
                                           <div class="float-right">
                                                   <p><i class="fa fa-inr pr-2" aria-hidden="true"></i>4000</p>
                                           </div>
-      
+
                                     </div>
                                     <div class="clearfix my-2">
                                           <div class="float-left">
@@ -68,7 +68,7 @@
                                           <div class="float-right">
                                                 <p><i class="fa fa-inr pr-2" aria-hidden="true"></i>4000</p>
                                           </div>
-            
+
                                     </div>
                                     <div class="clearfix my-2">
                                           <div class="float-left">
@@ -77,7 +77,7 @@
                                           <div class="float-right">
                                                 <p><i class="fa fa-inr pr-2" aria-hidden="true"></i>4000</p>
                                           </div>
-            
+
                                     </div>
                                     <div class="clearfix my-2">
                                           <div class="float-left">
@@ -86,9 +86,9 @@
                                           <div class="float-right">
                                                 <p><i class="fa fa-inr pr-2" aria-hidden="true"></i>4000</p>
                                           </div>
-      
+
                                     </div>
-                                                 
+
                         </div>
                   </div>
                   {{-- /.card --}}
@@ -107,14 +107,14 @@
                                           <div class="about pr-2  px-lg-4 vertical-line">
                                                 <p class="font-weight-bold">About</p>
                                           </div>
-                                         
+
                                           <div class="about px-2 px-lg-4 vertical-line">
                                                 <p class="font-weight-bold">Reviews</p>
                                           </div>
                                           <div class="about pl-2 px-lg-4 ">
                                                 <p class="font-weight-bold">Add to favourites <i class="far fa-heart mkd-text pl-2"></i></p>
                                           </div>
-                                                            
+
                                     </div>
                                     {{-- /.flex --}}
 
@@ -138,28 +138,28 @@
                                           </li>
                                         </ul>
                         <div class="tab-content" id="pills-tabContent">
-                                         
-                                          
-                                          
+
+
+
                           <div class="tab-pane fade show active" id="pills-all-photos" role="tabpanel" aria-labelledby="pills-all-photos-tab">
                               <div class="row ">
-                                    <div class="col-4">  
+                                    <div class="col-4">
                                          <a href="mkd_design/assets/images/adult-attractive-beautiful-457701.jpg" data-lightbox="artist-gallery" data-title="This is model" ><img class="img-fluid profile-gallery-img" src="{{asset('mkd_design/assets/images/adult-attractive-beautiful-457701.jpg')}}" alt=""></a>
-                                         
-                                        
+
+
 
                                     </div>
                                     <div class="col-4">
                                           <a href="mkd_design/assets/images/model.jpg" data-lightbox="artist-gallery" ><img class="img-fluid profile-gallery-img"  src="{{asset('mkd_design/assets/images/model.jpg')}}" alt=""></a>
 
-                                          
+
                                     </div>
                                     <div class="col-4">
                                           <a href="mkd_design/assets/images/adult-attractive-beautiful-457701.jpg" data-lightbox="artist-gallery" ><img class="img-fluid profile-gallery-img"  src="{{asset('mkd_design/assets/images/adult-attractive-beautiful-457701.jpg')}}" alt=""></a>
 
-                                          
+
                                     </div>
-                  
+
 
                                     </div>
                                     {{-- /.row --}}
@@ -168,24 +168,24 @@
                                     <div class="row ">
                                           <div class="col-4">
                                                 <a href="mkd_design/assets/images/banner.jpg" data-lightbox="artist-gallery" ><img class="img-fluid profile-gallery-img"  src="{{asset('mkd_design/assets/images/banner.jpg')}}" alt=""></a>
-      
-                                                
+
+
                                           </div>
-                                          <div class="col-4">  
-                                                <a href="mkd_design/assets/images/adult-attractive-beautiful-457701.jpg" data-lightbox="artist-gallery" ><img class="img-fluid profile-gallery-img"  src="{{asset('mkd_design/assets/images/adult-attractive-beautiful-457701.jpg')}}" alt=""></a>
-             
-             
-             
-                                          </div>
-       
                                           <div class="col-4">
-                                                <a href="mkd_design/assets/images/banner.jpg" data-lightbox="artist-gallery" ><img class="img-fluid profile-gallery-img"  src="{{asset('mkd_design/assets/images/banner.jpg')}}" alt=""></a>
-      
-                                                
+                                                <a href="mkd_design/assets/images/adult-attractive-beautiful-457701.jpg" data-lightbox="artist-gallery" ><img class="img-fluid profile-gallery-img"  src="{{asset('mkd_design/assets/images/adult-attractive-beautiful-457701.jpg')}}" alt=""></a>
+
+
+
                                           </div>
 
-                        
-      
+                                          <div class="col-4">
+                                                <a href="mkd_design/assets/images/banner.jpg" data-lightbox="artist-gallery" ><img class="img-fluid profile-gallery-img"  src="{{asset('mkd_design/assets/images/banner.jpg')}}" alt=""></a>
+
+
+                                          </div>
+
+
+
                                     </div>
                                     {{-- /.row --}}
                               </div>
@@ -199,18 +199,18 @@
                                                 <a href="#"><h6>View More <i class="far fa-arrow-alt-circle-down pl-1"></i></h6></a>
                                     </div>
 
-                        
-                             
+
+
                   </div>
                   {{-- /.card --}}
-                  
+
             </div>
             {{-- /.col --}}
 
       </div>
       {{-- /.row --}}
 
-      
+
 </div>
 {{-- /.container --}}
 

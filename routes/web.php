@@ -24,12 +24,12 @@ Route::get('/profile', function () {
 Route::get('/profile/edit', function () {
       return view('mkd_design.pages.artist.artist-profile-edit');
   });
-  
+
 
 // Artist list blade
 Route::get('/list', function () {
     return view('mkd_design.pages.artist.artist-showcase');
-});
+})->name('artist.list');
 
 // Artist login blade
 Route::get('/login', function () {
