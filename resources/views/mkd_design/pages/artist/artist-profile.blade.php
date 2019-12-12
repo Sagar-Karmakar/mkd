@@ -32,7 +32,7 @@
                                     <div class="float-right">
                                           {{-- review --}}
                                           {{-- <p>1 review </p> --}}
-                                          <span class="badge badge-success"><span> 4.1  <i class="fas fa-star-half-alt"></span></i></span>
+                                          <span class="badge badge-success"><span> 4.1  <i class="fas fa-star-half-alt"></i></span>
 
 
                                     </div>
@@ -50,7 +50,18 @@
                   {{-- /.card --}}
                   <div class="card">
                         <div class="card-body">
-                               <h4 class="">Pricing</h4>
+                              <div class="flex-row d-flex justify-content-between">
+                                   <div>
+                                          <h4 class="">Pricing</h4>
+                                   
+                                   </div> 
+                                   <div class=" mt-1">
+                                          <a href="/pricing/edit" class="change-pricing px-2">Edit <i class="fas fa-edit"></i></a>
+                                   
+                                   </div> 
+
+
+                              </div>
                                <hr>
                                     <div class="clearfix my-2">
                                           <div class="float-left">

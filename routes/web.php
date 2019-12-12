@@ -36,11 +36,16 @@ Route::get('/login', function () {
     return view('mkd_design.pages.login');
 });
 
-// Artist login blade
-// Route::get('/password/change', function () {
-//     return view('mkd_design.pages.artist.changePassword');
-// });
+// Artist password change blade
+Route::get('/password/change', function () {
+    return view('mkd_design.pages.all.changePassword');
+});
 
+
+// Artist pricing edit blade
+Route::get('/pricing/edit', function () {
+    return view('mkd_design.pages.artist.edit-pricing');
+});
 
 Route::get('/register', 'Users\AuthController@RegistrationIndex')->name('register.index');
 Route::post('/register', 'Users\AuthController@RegistrationSubmit')->name('register.submit');

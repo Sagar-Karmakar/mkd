@@ -1,4 +1,4 @@
-<div class="container-fluid footer mkd-footer text-center mt-3 pt-2 pb-1">
+<div class="container-fluid footer mkd-footer sticky-bottom text-center mt-3 pt-2 pb-1">
             
                         
       <div class="py-3">

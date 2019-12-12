@@ -1,6 +1,5 @@
 <form>
-            <h5 class="mkd-text">Change Password</h5>
-            <hr>
+           
             
     
             <div class="form-group">

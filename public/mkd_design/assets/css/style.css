@@ -56,6 +56,8 @@ i {
       height: 2.2rem;
 }
 
+
+
  /* /.Navbar */
 
 
@@ -136,6 +138,10 @@ _______________ */
       position: absolute;
       top: 48%;
       left: 81%;
+      background: rgba(226, 225, 225, 0.932);
+      color: rgb(20, 13, 3);
+}
+.change-pricing {
       background: rgba(226, 225, 225, 0.932);
       color: rgb(20, 13, 3);
 }
@@ -220,6 +226,10 @@ _______________ */
       padding-bottom: 14%;
 }
 
+.user-photo {
+      height: 2rem;
+}
+
 /* ____________
 
      Artist Profile END
@@ -234,6 +244,9 @@ ___________*/
 .mkd-footer {
       border-top: 1px solid #FE2968;
       background: #f7f7f7;
+      /* position: absolute; */
+      /* top: 100%; */
+      /* bottom: 0; */
       
 }
 
@@ -272,6 +285,15 @@ ___________*/
 
        }
 
+       /* ==============
+          Big Card
+       ============== */ 
+
+       .big-centered-card {
+            margin: 2% 7.69%;
+      
+       }
+
 }
 
 @media(max-width: 769px){
@@ -285,6 +307,11 @@ ___________*/
             padding: 1em;
       
       }
+      .card, img {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+      }
+      
 
       /* .user-benefit .work-image img {
       height: 14em;
