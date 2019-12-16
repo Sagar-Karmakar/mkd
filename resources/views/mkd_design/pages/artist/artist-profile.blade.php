@@ -53,12 +53,12 @@
                               <div class="flex-row d-flex justify-content-between">
                                    <div>
                                           <h4 class="">Pricing</h4>
-                                   
-                                   </div> 
+
+                                   </div>
                                    <div class=" mt-1">
                                           <a href="/pricing/edit" class="change-pricing px-2">Edit <i class="fas fa-edit"></i></a>
-                                   
-                                   </div> 
+
+                                   </div>
 
 
                               </div>

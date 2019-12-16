@@ -47,6 +47,11 @@ Route::get('/pricing/edit', function () {
     return view('mkd_design.pages.artist.edit-pricing');
 });
 
+// Artist booking edit blade
+Route::get('/bookings', function () {
+    return view('mkd_design.pages.artist.artist-booking');
+});
+
 Route::get('/register', 'Users\AuthController@RegistrationIndex')->name('register.index');
 Route::post('/register', 'Users\AuthController@RegistrationSubmit')->name('register.submit');
 Route::get('/login', 'Users\AuthController@LoginIndex')->name('login.index');

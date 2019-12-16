@@ -31,9 +31,11 @@
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle  d-flex flex-row mt-1" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <p class="font-weight-bold" name="user-name"> Arpita Manna</p>
-                <img src="{{asset('mkd_design/assets/images/logo/favicon.png')}}" alt="logo of Make up dunia" width="35" height="35" class="d-inline-block align-top">
+                <img src="{{asset('mkd_design/assets/images/logo/favicon.png')}}" alt="logo of Make up dunia" width="35" height="35" class="d-inline-block align-center">
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="/bookings">Bookings</a>
+
                 <a class="dropdown-item" href="/profile/edit">Edit Profile</a>
                 <a class="dropdown-item" href="/pricing">Edit Pricing</a>
                 <a class="dropdown-item" href="/password">Change Password</a>
