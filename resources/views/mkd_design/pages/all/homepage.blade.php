@@ -1,4 +1,7 @@
 @extends('mkd_design.layouts.mkd-layout')
+@section('title')
+Makeup Dunia
+@endsection
 @section('content')
 
 
@@ -435,7 +438,8 @@
                   {{-- sign Up --}}
                   <div class="card mkd-card p-4">
                         <h4 class="mkd-text">Sign Up to get your perfect look</h4>
-                        <form action="">
+                        <form method="POST" action="{{route('user.register.submit')}}">
+                            {{csrf_field()}}
 
                               <div class="form-group">
 

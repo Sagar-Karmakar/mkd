@@ -20,13 +20,13 @@
               </form>
             </li>
             <li class="nav-item active">
-              <a class="nav-link mt-1" href="#">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-link mt-1" href="{{route('home')}}">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link   mt-1" href="/artist-showcase">Artist</a>
+            <a class="nav-link   mt-1" href="{{route('artist.list')}}">Artist</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link   mt-1" href="/login">Login</a>
+              <a class="nav-link   mt-1" href="{{route('login.index')}}">Login</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle  d-flex flex-row mt-1" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('mkd_design.pages.homepage');
-});
+Route::get('/', 'HomePage')->name('home');
 
 
 // Artist profilr blade
@@ -22,7 +20,7 @@ Route::get('/profile', function () {
 });
 
 Route::get('/profile/edit', function () {
-      return view('mkd_design.pages.artist.artist-profile-edit');
+      return view('mkd_design.pages.artist.edit-profile');
   });
 
 
@@ -54,5 +52,6 @@ Route::get('/bookings', function () {
 
 Route::get('/register', 'Users\AuthController@RegistrationIndex')->name('register.index');
 Route::post('/register', 'Users\AuthController@RegistrationSubmit')->name('register.submit');
+Route::post('/user/reg', 'Users\AuthController@UserRegister')->name('user.register.submit');
 Route::get('/login', 'Users\AuthController@LoginIndex')->name('login.index');
 Route::post('/login', 'Users\AuthController@LoginSubmit')->name('login.submit');

@@ -19,7 +19,7 @@ class AuthController extends Controller
     //show registration page
     public function RegistrationIndex()
     {
-        return view('mkd_design.pages.signup');
+        return view('mkd_design.pages.all.signup');
     }
 
     //post registration
@@ -72,6 +72,15 @@ class AuthController extends Controller
     }
 
     /*
+    In Homepage User Can Register
+    just giving his name phone number
+    */
+    //Sign Up to get your perfect look
+    public function UserRegister(Request $request)
+    {
+        # code...
+    }
+    /*
     Login For All User
     Artist and User..
     check type and redirect right page
@@ -80,7 +89,7 @@ class AuthController extends Controller
     //show Login page
     public function LoginIndex()
     {
-        return view('mkd_design.pages.login');
+        return view('mkd_design.pages.all.login');
     }
 
     //post Login
