@@ -117,7 +117,7 @@ _______________ */
       /* width: 100vh; */
       position: relative;
       background-repeat: no-repeat;
-      background-position: top right;
+      /* background-position: center center; */
       background-size: cover;
 }
 .heading-action {
