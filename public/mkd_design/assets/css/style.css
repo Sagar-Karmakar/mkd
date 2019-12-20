@@ -33,9 +33,9 @@ a {
       color: #FE2968;
 }
 
-i {
-      /* color: #FE2968; */
-}
+/* i {
+      color: #FE2968;
+} */
 .light-text {
       color: #8a88889c;
 }
@@ -132,7 +132,7 @@ _______________ */
 /* artist card showcase */
 .mkd-card img {
       height: 15rem;
-      width: 100%
+      width: 100%;
       border-top-left-radius: .2rem;
       border-top-right-radius: .2rem;
 
@@ -218,11 +218,11 @@ _______________ */
       height: 20.71em;
 }
 
-.artist-img {
-      /* height: 20em; */
-      /* width: 100%; */
-      /* border-radius: 100%; */
-}
+/* .artist-img {
+      height: 20em;
+      width: 100%;
+      border-radius: 100%;
+} */
 
 .profile-gallery-img {
       height: 14em;
