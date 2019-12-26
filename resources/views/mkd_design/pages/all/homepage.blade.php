@@ -1,7 +1,5 @@
 @extends('mkd_design.layouts.mkd-layout')
-@section('title')
-Makeup Dunia
-@endsection
+@section('title','MakeUp Duia')
 @section('content')
 
 
