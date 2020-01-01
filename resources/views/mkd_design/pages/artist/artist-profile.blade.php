@@ -136,37 +136,38 @@
                   {{-- card --}}
 
                   <div class="card gallery mt-4">
+                        <div class="card-body">
 
-                              <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-                                          <li class="nav-item">
-                                            <a class="nav-link active" id="pills-all-photos-tab" data-toggle="pill" href="#pills-all-photos" role="tab" aria-controls="pills-all-photos" aria-selected="true">All Photos</a>
-                                          </li>
-                                          <li class="nav-item">
-                                            <a class="nav-link" id="pills-albums-tab" data-toggle="pill" href="#pills-albums" role="tab" aria-controls="pills-albums" aria-selected="false">Albums</a>
-                                          </li>
-                                          <li class="nav-item">
-                                            <a class="nav-link" id="pills-video-tab" data-toggle="pill" href="#pills-video" role="tab" aria-controls="pills-video" aria-selected="false">Videos</a>
-                                          </li>
-                                        </ul>
-                        <div class="tab-content" id="pills-tabContent">
-
-
-
-                          <div class="tab-pane fade show active" id="pills-all-photos" role="tabpanel" aria-labelledby="pills-all-photos-tab">
-                              <div class="row ">
-                                    <div class="col-4">
-                                         <a href="mkd_design/assets/images/adult-attractive-beautiful-457701.jpg" data-lightbox="artist-gallery" data-title="This is model" ><img class="img-fluid profile-gallery-img" src="{{asset('mkd_design/assets/images/adult-attractive-beautiful-457701.jpg')}}" alt=""></a>
+                                <ul class="nav nav-tabs mb-3" id="tabs-tab" role="tablist">
+                                            <li class="nav-item">
+                                                <a class="nav-link active" id="tabs-all-photos-tab" data-toggle="pill" href="#tabs-all-photos" role="tab" aria-controls="tabs-all-photos" aria-selected="true">All Photos</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" id="tabs-albums-tab" data-toggle="pill" href="#tabs-albums" role="tab" aria-controls="tabs-albums" aria-selected="false">Albums</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" id="tabs-video-tab" data-toggle="pill" href="#tabs-video" role="tab" aria-controls="tabs-video" aria-selected="false">Videos</a>
+                                            </li>
+                                            </ul>
+                            <div class="tab-content" id="tabs-tabContent">
 
 
 
-                                    </div>
-                                    <div class="col-4">
-                                          <a href="mkd_design/assets/images/model.jpg" data-lightbox="artist-gallery" ><img class="img-fluid profile-gallery-img"  src="{{asset('mkd_design/assets/images/model.jpg')}}" alt=""></a>
+                            <div class="tab-pane fade show active" id="tabs-all-photos" role="tabpanel" aria-labelledby="tabs-all-photos-tab">
+                                <div class="row ">
+                                        <div class="col-4">
+                                            <a href="mkd_design/assets/images/adult-attractive-beautiful-457701.jpg" data-lightbox="artist-gallery" data-title="This is model" ><img class="img-fluid profile-gallery-img" src="{{asset('mkd_design/assets/images/adult-attractive-beautiful-457701.jpg')}}" alt=""></a>
+
 
 
                                     </div>
                                     <div class="col-4">
-                                          <a href="mkd_design/assets/images/adult-attractive-beautiful-457701.jpg" data-lightbox="artist-gallery" ><img class="img-fluid profile-gallery-img"  src="{{asset('mkd_design/assets/images/adult-attractive-beautiful-457701.jpg')}}" alt=""></a>
+                                            <a href="mkd_design/assets/images/model.jpg" data-lightbox="artist-gallery" ><img class="img-fluid profile-gallery-img"  src="c" alt=""></a>
+
+
+                                    </div>
+                                    <div class="col-4">
+                                            <a href="mkd_design/assets/images/adult-attractive-beautiful-457701.jpg" data-lightbox="artist-gallery" ><img class="img-fluid profile-gallery-img"  src="{{asset('mkd_design/assets/images/adult-attractive-beautiful-457701.jpg')}}" alt=""></a>
 
 
                                     </div>
@@ -177,7 +178,7 @@
 
 
                                     <div class="row ">
-                                          <div class="col-4">
+                                            <div class="col-4">
                                                 <a href="mkd_design/assets/images/banner.jpg" data-lightbox="artist-gallery" ><img class="img-fluid profile-gallery-img"  src="{{asset('mkd_design/assets/images/banner.jpg')}}" alt=""></a>
 
 
@@ -201,9 +202,9 @@
                                     {{-- /.row --}}
                               </div>
                               {{-- /.pill --}}
-                              <div class="tab-pane fade" id="pills-albums" role="tabpanel" aria-labelledby="pills-albums-tab">...</div>
+                              <div class="tab-pane fade" id="tabs-albums" role="tabpanel" aria-labelledby="tabs-albums-tab">...</div>
                               {{-- /.pill --}}
-                              <div class="tab-pane fade" id="pills-video" role="tabpanel" aria-labelledby="pills-video-tab">...</div>
+                              <div class="tab-pane fade" id="tabs-video" role="tabpanel" aria-labelledby="tabs-video-tab">...</div>
                         </div>
                         {{-- nav pills end  --}}
                                     <div class="text-center">
@@ -211,15 +212,124 @@
                                     </div>
 
 
+                    </div>
+                    {{-- /.card-body --}}
 
                   </div>
                   {{-- /.card --}}
+
+                    <div class="card">
+                        <div class="card-body">
+                            <h6><span>3</span> user review</h6>
+
+                            {{-- review --}}
+                            <div class="my-3">
+                                <!-- Media top -->
+                                <div class="media">
+                                    <img src="{{asset('mkd_design/assets/images/model.jpg')}}" class="align-self-start rounded mt-1 mr-3" style="width:60px; height:60px">
+                                    <div class="media-body">
+                                    <h6>Arpita Manna <small><i>Posted on February 19, 2020</i></small></h6>
+                                    <div class=" star-icons">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </div>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+                                    </div>
+                                </div>
+                                <hr>
+                            </div>
+                    {{-- /. review --}}
+
+
+                            {{-- review --}}
+                            <div class="my-3">
+                                <!-- Media top -->
+                                <div class="media">
+                                    <img src="{{asset('mkd_design/assets/images/model.jpg')}}" class="align-self-start rounded mt-1 mr-3" style="width:60px; height:60px">
+                                    <div class="media-body">
+                                    <h6>Arpita Manna <small><i>Posted on February 19, 2020</i></small></h6>
+                                    <div class=" star-icons">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </div>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+                                    </div>
+                                </div>
+                                <hr>
+                            </div>
+                            {{-- /. review --}}
+
+                            {{-- Write a review --}}
+
+                            <h5>Write a review</h5>
+
+
+                                <section class='rating-widget'>
+
+                                <!-- Rating Stars Box -->
+                                <div class='rating-stars mt-3'>
+                                    <ul id='stars'>
+                                    <li class='star' title='Poor' data-value='1'>
+                                        <i class='fa fa-star fa-fw'></i>
+                                    </li>
+                                    <li class='star' title='Fair' data-value='2'>
+                                        <i class='fa fa-star fa-fw'></i>
+                                    </li>
+                                    <li class='star' title='Good' data-value='3'>
+                                        <i class='fa fa-star fa-fw'></i>
+                                    </li>
+                                    <li class='star' title='Excellent' data-value='4'>
+                                        <i class='fa fa-star fa-fw'></i>
+                                    </li>
+                                    <li class='star' title='WOW!!!' data-value='5'>
+                                        <i class='fa fa-star fa-fw'></i>
+                                    </li>
+                                    </ul>
+                                </div>
+
+                                <div class='success-box my-2'>
+                                    <div class='clearfix'></div>
+
+                                    <div class='text-message'></div>
+                                    <div class='clearfix'></div>
+                                </div>
+
+
+
+                                </section>
+
+                                <div class="form-group">
+                                    {{-- <label for="comment">Comment:</label> --}}
+                                    <textarea class="form-control" rows="5" id="comment" placeholder="write a review"></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-outline-success">Submit</button>
+
+
+
+
+
+
+                        </div>
+                        {{-- /.card-body --}}
+
+                    </div>
+                    {{-- /.card --}}
 
             </div>
             {{-- /.col --}}
 
       </div>
       {{-- /.row --}}
+
+
 
 
 </div>

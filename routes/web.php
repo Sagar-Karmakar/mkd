@@ -50,6 +50,12 @@ Route::get('/bookings', function () {
     return view('mkd_design.pages.artist.artist-booking');
 });
 
+// Artist booking blade
+Route::get('/book/now', function () {
+    return view('mkd_design.pages.user.book-now');
+});
+
+
 Route::get('/register', 'Users\AuthController@RegistrationIndex')->name('register.index');
 Route::post('/register', 'Users\AuthController@RegistrationSubmit')->name('register.submit');
 Route::post('/user/reg', 'Users\AuthController@UserRegister')->name('user.register.submit');
