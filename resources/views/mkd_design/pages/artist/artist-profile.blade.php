@@ -162,7 +162,7 @@
 
                                     </div>
                                     <div class="col-4">
-                                            <a href="mkd_design/assets/images/model.jpg" data-lightbox="artist-gallery" ><img class="img-fluid profile-gallery-img"  src="c" alt=""></a>
+                                            <a href="mkd_design/assets/images/model.jpg" data-lightbox="artist-gallery" ><img class="img-fluid profile-gallery-img"  src="{{asset('mkd_design/assets/images/model.jpg')}}" alt=""></a>
 
 
                                     </div>
