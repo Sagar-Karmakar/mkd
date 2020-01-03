@@ -5,19 +5,26 @@
 <div class="container-fluid ">
         <div class="card signup-centered-card">
                 <div class="card-body">
+                    {{-- session message --}}
+                    @if(Session::has('message'))
+                    <p class="alert {{Session::get('alert-class')}}">{{ Session::get('message') }}</p>
+                    @endif
+                    {{-- session message --}}
                     <form method="POST" action="{{route('login.submit')}}">
-                        {{csrf_field()}}
+                        @csrf
                             <h5 class="mkd-text">Welcome Back !</h5>
                             <hr>
 
 
                             <div class="form-group">
                             <label for="mkdInputEmail">Email address</label>
-                            <input type="email" class="form-control" id="mkdInputEmail" aria-describedby="emailHelp" placeholder="Enter email" required>
+                            <input type="email" class="form-control" id="mkdInputEmail" name="email" aria-describedby="emailHelp" placeholder="Enter email" required>
+                            <p class="error-message">{{ $errors->first('email') }}</p>
                             </div>
                             <div class="form-group">
                             <label for="mkdInputPassword">Password</label>
-                            <input type="password" class="form-control" id="mkdInputPassword" placeholder="Password" required>
+                            <input type="password" class="form-control" id="mkdInputPassword" name="password" placeholder="Password" required>
+                            <p class="error-message">{{ $errors->first('password') }}</p>
                             </div>
 
 
@@ -30,13 +37,13 @@
 
                             <p class="text-center text-muted my-2">------------Or-----------</p>
 
-                            <a href="#">
+                            <a href="{{ url('/auth/redirect/facebook') }}">
                                 <button class="mt-2 px-3 btn btn-block loginBtn loginBtn--facebook text-white">
                                     <i class="fab fa-facebook-f text-white mr-2"></i> Login with Facebook
                                 </button>
                             </a>
 
-                            <a href="#">
+                            <a href="{{ url('/auth/redirect/google') }}">
                                 <button class="mt-2 px-3 btn btn-block loginBtn loginBtn--google text-white">
                                     <i class="fab fa-google text-white mr-2"></i> Login with Google
                                 </button>

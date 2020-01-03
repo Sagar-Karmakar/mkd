@@ -399,6 +399,13 @@ color: #E6255F;
 
 }
 
+
+        /* Error Message */
+        .error-message {
+            color: red;
+            font-weight: bold;
+    }
+
 /* Direct changes */
 .dropdown-toggle::after {
 

@@ -1,12 +1,18 @@
 @extends('mkd_design.layouts.mkd-layout')
+@section('title', 'Register In Makeup Dunia')
 @section('content')
 
 
 <div class="container-fluid ">
         <div class="card signup-centered-card">
                 <div class="card-body">
+                    {{-- session message --}}
+                    @if(Session::has('message'))
+                    <p class="alert {{Session::get('alert-class')}}">{{ Session::get('message') }}</p>
+                    @endif
+                    {{-- session message --}}
                     <form method="POST" action="{{route('register.submit')}}">
-                        {{csrf_field()}}
+                        @csrf
                             <h5 class="mkd-text">Create Your Account</h5>
                             <hr>
                             <div class="form-group">
@@ -23,11 +29,11 @@
                             <div class="form-group">
                             <label for="mkdInputPassword">Password</label>
                             <input type="password" name="password" class="form-control" id="mkdInputPassword" placeholder="Password" required>
-                            <p class="error-message">{{ $errors->first('password') }}</p>
                             </div>
                             <div class="form-group">
-                            <label for="mkdInputPassword"> Re-Type Your Password</label>
+                            <label for="mkdInputPassword"> Confirm Password</label>
                             <input type="password" name="password_confirmation" class="form-control" id="mkdInputPassword" placeholder=" Reapeat Password" required>
+                            <p class="error-message">{{ $errors->first('password') }}</p>
                             </div>
                             <div class="checkUsertype">
 

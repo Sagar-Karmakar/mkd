@@ -8,7 +8,11 @@
             <!-- hero banner -->
 
             <div class="container-fluid main-page-banner text-left mb-4">
-
+                {{-- session message --}}
+                @if(Session::has('message'))
+                <p class="alert {{Session::get('alert-class')}}">{{ Session::get('message') }}</p>
+                @endif
+                {{-- session message --}}
                 <div class="heading-action">
                 <div class="banner-heading text-white">
                         <h4>Choose your best make up artist. By view their work profile in <a href="/">MakeUP Dunia</a> </h4>
@@ -437,30 +441,30 @@
                 <div class="card mkd-card p-4">
                     <h4 class="mkd-text">Sign Up to get your perfect look</h4>
                     <form method="POST" action="{{route('user.register.submit')}}">
-                        {{csrf_field()}}
-
+                        @csrf
                             <div class="form-group">
-
-                                <input type="email" class="form-control"  placeholder="Enter email">
+                                <input type="name" class="form-control" name="name"  placeholder="Your Name">
+                                <p class="error-message">{{ $errors->first('name') }}</p>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control" name="email"  placeholder="Enter email">
                                 <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                                <p class="error-message">{{ $errors->first('email') }}</p>
                             </div>
                             <div class="form-group">
-
-                                        <input type="number" class="form-control" id="number" placeholder="Phone number">
+                                <input type="password" class="form-control" name="password"  placeholder="Password">
                             </div>
                             <div class="form-group">
-
-                                <input type="password" class="form-control"  placeholder="Password">
+                                <input type="password" class="form-control" name="password_confirmation"  placeholder="Confirm Password">
+                                <p class="error-message">{{ $errors->first('password') }}</p>
                             </div>
                             <div class="form-check">
                                 <input type="checkbox" class="form-check-input" id="exampleCheck1">
                                 <label class="form-check-label" for="exampleCheck1">Check me out</label>
                             </div>
                             <button type="submit" class="btn mkd-btn text-white btn-block mt-1">Submit</button>
-
                     </form>
                 </div>
-
         </div>
         <!-- /.col -->
 
