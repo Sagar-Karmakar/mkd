@@ -22,8 +22,8 @@ class CreateUsersTable extends Migration
             $table->string('provider_id')->nullable();
             $table->bigInteger('phone_number')->unique()->nullable();
             $table->string('account_type');
-            $table->string('profile_picture');
-            $table->string('cover_picture');
+            $table->string('profile_picture')->nullable();
+            $table->string('cover_picture')->nullable();
             $table->string('gender');
             $table->string('state')->nullable();
             $table->string('city')->nullable();

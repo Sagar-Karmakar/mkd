@@ -9,7 +9,7 @@
                         <h5 class="mkd-text">Edit Profile</h5>
                         <hr>
 
-                        @include('mkd_design.include.forms.artist-profile-edit-form')
+                        @include('mkd_design.include.forms.artist-profile-edit-form',[$user])
                     </div>
             </div>
 </div>

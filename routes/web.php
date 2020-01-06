@@ -13,21 +13,21 @@
 
 Route::get('/', 'Users\HomePage')->name('home');
 
-
-// Artist profilr blade
-Route::get('/profile', function () {
-    return view('mkd_design.pages.artist.artist-profile');
-});
-
-Route::get('/profile/edit', function () {
-    return view('mkd_design.pages.artist.edit-profile');
-});
-
-
 // Artist list blade
-Route::get('/list', function () {
-    return view('mkd_design.pages.artist.artist-showcase');
-})->name('artist.list');
+Route::get('/profile', 'Users\ProfileController@index')->name('artist.list');
+
+// Artist profile blade
+Route::get('/profile/{user_name}', 'Users\ProfileController@show')->name('profile.show');
+
+Route::get('/profile/{user_name}/edit', 'Users\ProfileController@edit')->name('profile.edit');
+
+Route::post('/profile/{user_name}', 'Users\ProfileController@update')->name('profile.update');
+
+Route::post('/profile-pic/{user_name}', 'Users\ProfileController@ProfilePic')->name('profile.picture.update')->middleware('optimizeImages');
+
+Route::post('/cover-pic/{user_name}', 'Users\ProfileController@Coverpic')->name('cover.picture.update')->middleware('optimizeImages');
+
+
 
 // Artist login blade
 Route::get('/login', function () {
@@ -61,6 +61,7 @@ Route::post('/register', 'Users\AuthController@RegistrationSubmit')->name('regis
 Route::post('/user/reg', 'Users\AuthController@UserRegister')->name('user.register.submit');
 Route::get('/login', 'Users\AuthController@LoginIndex')->name('login.index');
 Route::post('/login', 'Users\AuthController@LoginSubmit')->name('login.submit');
+Route::get('/logout', 'Users\AuthController@Logout')->name('logout');
 Route::get('/auth/redirect/{provider}', 'Users\AuthController@redirect');
 Route::get('/callback/{provider}', 'Users\AuthController@callback');
 Route::post('/social-login', 'Users\AuthController@SocialLogin')->name('social.login');

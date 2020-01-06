@@ -27,14 +27,7 @@ class AuthController extends Controller
     //post registration
     public function RegistrationSubmit(Request $request)
     {
-        //Validate data
-        $this->validate($request,
-            [
-            'name' => 'required|min:6',
-            'email' => 'required|email|unique:users|unique:logins',
-            'account_type' => 'required',
-            'password' => 'required|confirmed|min:6',
-            ]);
+
         //store data in varriable
         $name = $request->input('name');
         $email = $request->input('email');
@@ -52,8 +45,6 @@ class AuthController extends Controller
             $user->user_name = $user_name;
             $user->email = $email;
             $user->gender = "female";
-            $user->profile_picture = "profile.png";
-            $user->cover_picture = "cover.png";
             $user->account_type = $account_type;
             $user->save();
             $login = new Login();
@@ -63,7 +54,7 @@ class AuthController extends Controller
             $login->save();
             \Session::flash('message', "Account has been created");
             \Session::flash('alert-class', 'alert-success');
-            session(['name' => $name,'account_type' => $account_type,'profile_picture' => $user->profile_picture]);
+            session(['name' => $name,'user_name'=>$user_name, 'account_type' => $account_type,'profile_picture' => $user->profile_picture]);
             return redirect('/');
         }
         else{
@@ -105,8 +96,6 @@ class AuthController extends Controller
             $user->user_name = $user_name;
             $user->email = $email;
             $user->gender = "female";
-            $user->profile_picture = "profile.png";
-            $user->cover_picture = "cover.png";
             $user->account_type = $account_type;
             $user->save();
             $login = new Login();
@@ -116,7 +105,7 @@ class AuthController extends Controller
             $login->save();
             \Session::flash('message', "Account has been created");
             \Session::flash('alert-class', 'alert-success');
-            session(['name' => $name,'account_type' => $account_type,'profile_picture' => $user->profile_picture]);
+            session(['name' => $name,'user_name'=>$user_name, 'account_type' => $account_type,'profile_picture' => $user->profile_picture]);
             return redirect('/');
         }
         else{
@@ -161,7 +150,7 @@ class AuthController extends Controller
             if ($login->password == $password) {
                 \Session::flash('message', "You Are successfully login");
                 \Session::flash('alert-class', 'alert-success');
-                session(['name' => $user->name,'account_type' => $user->account_type,'profile_picture' => $user->profile_picture]);
+                session(['name' => $user->name,'user_name'=>$user->user_name, 'account_type' => $user->account_type,'profile_picture' => $user->profile_picture]);
                 return redirect('/');
             }
             else {
@@ -194,7 +183,7 @@ class AuthController extends Controller
             else{
                 \Session::flash('message', "You Are successfully login");
                 \Session::flash('alert-class', 'alert-success');
-                session(['name' => $user->name,'account_type' => $user->account_type,'profile_picture' => $user->profile_picture]);
+                session(['name' => $user->name,'user_name'=>$user->user_name, 'account_type' => $user->account_type,'profile_picture' => $user->profile_picture]);
                 return redirect('/');
             }
     }
@@ -227,7 +216,7 @@ class AuthController extends Controller
             $user->save();
             \Session::flash('message', "Account has been created");
             \Session::flash('alert-class', 'alert-success');
-            session(['name' => $name,'account_type' => $account_type,'profile_picture' => $user->profile_picture]);
+            session(['name' => $name,'user_name'=>$user_name, 'account_type' => $account_type,'profile_picture' => $user->profile_picture]);
             return redirect('/');
         }
         else{
@@ -238,23 +227,9 @@ class AuthController extends Controller
         }
     }
 
-    /*
-    it's mainly for Artist
-    who can edit her account's information
-    only data
-    */
-    //show Edit account page
-    public function EditAcccountIndex()
-    {
-
-    }
-
-    //post Edit Acccount
-    public function EditAcccountSubmit(Request $request)
-    {
-        //Validate data
-
-        //EditAcccount Logic
-    }
-
+    // logout controllers start
+    public function Logout(){
+        \Session::flush();
+        return redirect('/');
+        }
 }

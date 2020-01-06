@@ -35,8 +35,8 @@
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                     <a class="dropdown-item" href="/bookings">Bookings</a>
-
-                    <a class="dropdown-item" href="/profile/edit">Edit Profile</a>
+                    <a class="dropdown-item" href="/profile/{{Session::get('user_name')}}">Profile</a>
+                    <a class="dropdown-item" href="/profile/{{Session::get('user_name')}}/edit">Edit Profile</a>
                     <a class="dropdown-item" href="/pricing">Edit Pricing</a>
                     <a class="dropdown-item" href="/password">Change Password</a>
                     <hr>
