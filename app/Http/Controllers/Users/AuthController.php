@@ -138,7 +138,7 @@ class AuthController extends Controller
         ]);
         //Login Logic
         $email = $request->input('email');
-        $password = Hash::make($request->input('password'));
+        $password =$request->input('password');
         $user = User::where("email", $email)->first();
         $login = Login::where("email", $email)->first();
         if (empty($login)) {
@@ -147,7 +147,7 @@ class AuthController extends Controller
             return redirect()->back();
         }
         else{
-            if ($login->password == $password) {
+            if (Hash::check($password,$login['password'])) {
                 \Session::flash('message', "You Are successfully login");
                 \Session::flash('alert-class', 'alert-success');
                 session(['name' => $user->name,'user_name'=>$user->user_name, 'account_type' => $user->account_type,'profile_picture' => $user->profile_picture]);
@@ -222,6 +222,31 @@ class AuthController extends Controller
         else{
             \Session::flash('message', "Sorry you can't create an Account \n
             Please try again or contact us");
+            \Session::flash('alert-class', 'alert-danger');
+            return redirect()->back();
+        }
+    }
+
+    public function EditPass()
+    {
+        return view('mkd_design.pages.all.changePassword');
+    }
+
+    public function UpdatePass(Request $request)
+    {
+        $login =Login::where('user_name',$request->input('user_name'))->first();
+        $password = Hash::make($request->input('password'));
+        $oldpass =$request->input('oldPassword');
+        
+        if (Hash::check($oldpass,$login['password'])) {
+            $pass->password = $password;
+            $pass->save();
+            \Session::flash('message', "Password change successful");
+            \Session::flash('alert-class', 'alert-success');
+            return redirect('/');
+        }
+        else {
+            \Session::flash('message', "you enter wrong password");
             \Session::flash('alert-class', 'alert-danger');
             return redirect()->back();
         }

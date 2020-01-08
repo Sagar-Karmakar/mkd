@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Users;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\User;
+use App\Image;
 use Illuminate\Support\Facades\Storage;
 
 class ProfileController extends Controller
@@ -140,12 +141,43 @@ class ProfileController extends Controller
             }
             $user->profile_picture = $dp;
             $user->save();
+            $image = new Image;
+            $image->user_name = $user_name;
+            $image->title_of_image = time();
+            $image->image = $dp;
+            $image->album_of_image = "Profile Pictures";
         }
         return redirect()->back();
     }
 
     public function Coverpic(Request $request, $user_name)
     {
+        $this->validate($request, [
+            'photo'  => 'required|image|mimes:jpeg,png,jpg|max:2048'
+            ]);
+            $user = User::where('user_name', $user_name)->first();
+            if ($user_name === \Session::get('user_name')) {
+                if ($request->file('photo')->isValid()) {
+                    $extension = $request->photo->extension();
+                    $name=time() . '.' .$extension;
+                    $directory = 'public/artist/'.$user_name.'/'.'cover_picture/';
+                        if(!is_dir($directory)){Storage::makeDirectory($directory);}
+                    $request->photo->storeAs($directory, $name);
+                    $dp = 'storage/artist/'.$user_name.'/'.'cover_picture/'.$name;
+                }
+                else {
+                    \Session::flash('message', "Sorry your photo is not validate");
+                    \Session::flash('alert-class', 'alert-danger');
+                    return redirect()->back();
+                }
+                $user->cover_picture = $dp;
+                $user->save();
+                $image = new Image;
+                $image->user_name = $user_name;
+                $image->title_of_image = time();
+                $image->image = $dp;
+                $image->album_of_image = "Cover Pictures";
+            }
         return redirect()->back();
     }
 }

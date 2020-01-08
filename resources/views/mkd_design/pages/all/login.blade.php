@@ -31,7 +31,7 @@
                             <button type="submit" class="mt-2 px-3 btn btn-block mkd-btn text-white">Login</button>
                         </form>
 
-                        <p class="mt-2"><a href="#">Forget Password?</a></p>
+                        {{--  <a class="mt-2"><a href="#">Forget Password?</a></a>  --}}
 
 
 

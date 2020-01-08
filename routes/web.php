@@ -35,15 +35,17 @@ Route::get('/login', function () {
 });
 
 // Artist password change blade
-Route::get('/password/change', function () {
-    return view('mkd_design.pages.all.changePassword');
-});
+Route::get('/password', 'Users\AuthController@EditPass');
+Route::post('/password', 'Users\AuthController@UpdatePass')->name('update.pass');
 
 
 // Artist pricing edit blade
-Route::get('/pricing/edit', function () {
-    return view('mkd_design.pages.artist.edit-pricing');
-});
+
+Route::get('price', 'Users\PriceController@create')->name('price.create');
+Route::post('price', 'Users\PriceController@store')->name('price.store');
+
+Route::get('/pricing/{price}/edit', 'Users\PriceController@edit')->name('price.edit');
+Route::post('/pricing/{price}', 'Users\PriceController@update')->name('price.update');
 
 // Artist booking edit blade
 Route::get('/bookings', function () {
