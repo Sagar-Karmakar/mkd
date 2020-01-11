@@ -25,13 +25,11 @@
                 <li class="nav-item">
                 <a class="nav-link   mt-1" href="{{route('artist.list')}}">Artist</a>
                 </li>
-                <li class="nav-item">
-                <a class="nav-link   mt-1" href="{{route('login.index')}}">Login</a>
-                </li>
+                @if (Session::get('account_type') == "artist")
                 <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle  d-flex flex-row mt-1" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <p class="font-weight-bold" name="user-name"> Arpita Manna</p>
-                    <img src="{{asset('mkd_design/assets/images/logo/favicon.png')}}" alt="logo of Make up dunia" width="35" height="35" class="d-inline-block align-center">
+                    <p class="font-weight-bold" name="user-name">{{Session::get('name')}}</p>
+                    <img src="{{Session::get('profile_picture')}}" alt="profile picture" width="35" height="35" class="d-inline-block align-center">
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                     <a class="dropdown-item" href="/bookings">Bookings</a>
@@ -44,6 +42,28 @@
 
                 </div>
                 </li>
+                @elseif (Session::get('account_type') == "user")
+                <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle  d-flex flex-row mt-1" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <p class="font-weight-bold" name="user-name">{{Session::get('name')}}</p>
+                    <img src="{{Session::get('profile_picture')}}" alt="profile picture" width="35" height="35" class="d-inline-block align-center">
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="/bookings">Bookings</a>
+                    <a class="dropdown-item" href="/profile/{{Session::get('user_name')}}">Profile</a>
+                    <a class="dropdown-item" href="/profile/{{Session::get('user_name')}}/edit">Edit Profile</a>
+                    {{--  <a class="dropdown-item" href="/pricing/{{Session::get('user_name')}}/edit">Edit Pricing</a>  --}}
+                    <a class="dropdown-item" href="/password">Change Password</a>
+                    <hr>
+                    <a class="dropdown-item" href="/logout">Logout</a>
+
+                </div>
+                </li>
+                @else
+                <li class="nav-item">
+                <a class="nav-link   mt-1" href="{{route('login.index')}}">Login</a>
+                </li>
+                @endif
             </ul>
             </div>
         </nav>

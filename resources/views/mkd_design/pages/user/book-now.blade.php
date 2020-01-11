@@ -46,7 +46,7 @@
                         </div>
                         <div class="form-group">
                             <label for="inputAddress">Address</label>
-                            <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                            <input type="time" class="form-control" id="inputAddress" placeholder="1234 Main St">
                         </div>
 
                         <div class="form-row">

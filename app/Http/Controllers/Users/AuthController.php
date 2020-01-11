@@ -176,6 +176,7 @@ class AuthController extends Controller
                 'email'    => $getInfo->email,
                 'provider' => $provider,
                 'provider_id' => $getInfo->id,
+                'avatar'    => $getInfo->avatar,
             ];
             if (empty($user)) {
                 return view("mkd_design.include.forms.select-type-social-login")->with('user',$user_data);
@@ -193,6 +194,8 @@ class AuthController extends Controller
         //Validate data
         $this->validate($request,['account_type' => 'required']);
         //store data in varriable
+        $avatar_real = $request->input('avatar');
+        $avatar =(str_replace("normal","large",$avatar_real));
         $name = $request->input('name');
         $email = $request->input('email');
         $provider = $request->input('provider');
@@ -210,8 +213,7 @@ class AuthController extends Controller
             $user->provider = $provider;
             $user->provider_id = $provider_id;
             $user->gender = "female";
-            $user->profile_picture = "profile.png";
-            $user->cover_picture = "cover.png";
+            $user->profile_picture = $avatar;
             $user->account_type = $account_type;
             $user->save();
             \Session::flash('message', "Account has been created");
@@ -237,7 +239,7 @@ class AuthController extends Controller
         $login =Login::where('user_name',$request->input('user_name'))->first();
         $password = Hash::make($request->input('password'));
         $oldpass =$request->input('oldPassword');
-        
+
         if (Hash::check($oldpass,$login['password'])) {
             $pass->password = $password;
             $pass->save();

@@ -15,6 +15,7 @@
                                 </div>
                             <p class="error-message">{{ $errors->first('account_type') }}</p>
                             </div>
+                        <input type="hidden" name="avatar" value="{{$user['avatar']}}">
                         <input type="hidden" name="name" value="{{$user['name']}}">
                         <input type="hidden" name="email" value="{{$user['email']}}">
                         <input type="hidden" name="provider" value="{{$user['provider']}}">
