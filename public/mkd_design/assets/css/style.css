@@ -40,7 +40,7 @@ color: #E6255F;
 
     a:hover {
         text-decoration: none;
-        font-weight: bold;
+        /* font-weight: bold; */
         color: rgb(238, 2, 73);
     }
 
@@ -264,11 +264,10 @@ color: #E6255F;
         height: 20.71em;
     }
 
-    /* .artist-img {
-        height: 20em;
+    .artist-img {
+        height: 13.6em;
         width: 100%;
-        border-radius: 100%;
-    } */
+    }
 
     .profile-gallery-img {
         height: 14em;
@@ -425,7 +424,7 @@ color: #E6255F;
 
         }
         img {
-                margin-top: 1rem;
+                /* margin-top: 1rem; */
                 margin-bottom: 2rem;
         }
 
