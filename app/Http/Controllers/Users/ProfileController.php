@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\User;
 use App\Image;
+use ImageOptimizer;
 use Illuminate\Support\Facades\Storage;
 
 class ProfileController extends Controller
@@ -147,6 +148,7 @@ class ProfileController extends Controller
             $image->image = $dp;
             $image->album_of_image = "Profile Pictures";
         }
+        ImageOptimizer::optimize($dp);
         return redirect()->back();
     }
 
