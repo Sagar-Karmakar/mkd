@@ -13,11 +13,16 @@
             <div class="modal-body">
                 <form action="{{ route('cover.picture.update',$user->user_name) }}" method="POST" enctype="multipart/form-data">
                 {{ csrf_field() }}
-                        <div class="custom-file">
-                            <input type="file" name="photo" class="custom-file-input" id="customFile">
-                            <label class="custom-file-label" for="customFile">Choose file</label>
-                            <p class="error-message">{{ $errors->first('photo') }}</p>
+                        <div class="input-group mb-3">
+                            <div class="custom-file">
+                                <input type="file"  name="photo"  class="custom-file-input" id="mkd-upload"/>
+                                <label class="custom-file-label" for="mkd-upload">Choose file</label>
+                                <p class="error-message">{{ $errors->first('photo') }}</p>
+                            </div>
                         </div>
+
+
+
                         <!-- Modal footer -->
                         <div class="modal-footer">
                             <button type="submit" class="btn btn-info" >Save</button>

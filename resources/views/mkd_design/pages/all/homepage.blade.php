@@ -7,7 +7,7 @@
 
             <!-- hero banner -->
 
-            <div class="container-fluid main-page-banner text-left mb-4">
+            <div class="container-fluid main-page-banner text-left mb-md-4">
                 {{-- session message --}}
                 @if(Session::has('message'))
                 <p class="alert {{Session::get('alert-class')}}">{{ Session::get('message') }}</p>
@@ -35,7 +35,7 @@
             <!-- Showcase artist -->
 
             <div class="container-fluid showcase-artists mb-4">
-                    <div class="showcase-heading text-left my-4">
+                    <div class="showcase-heading text-left my-md-4">
                         <h3 class="mb-3">Best rated make up artists here</h3>
                         <!-- <hr> -->
                         <div class="clearfix">
@@ -481,19 +481,19 @@
     <div class="container-fluid showcase-area">
         <div class="row mb-4">
                 <div class="col-md-3">
-                    <img class="img-responsive rounded" src="{{asset('mkd_design/assets/images/adult-attractive-beautiful-457701.jpg')}}" alt="">
+                    <img class="img-responsive rounded mb-3" src="{{asset('mkd_design/assets/images/adult-attractive-beautiful-457701.jpg')}}" alt="">
 
                 </div>
                 <div class="col-md-3">
-                    <img class="img-responsive rounded" src="{{asset('mkd_design/assets/images/adult-attractive-beautiful-457701.jpg')}}" alt="">
+                    <img class="img-responsive rounded mb-3" src="{{asset('mkd_design/assets/images/adult-attractive-beautiful-457701.jpg')}}" alt="">
 
                 </div>
                 <div class="col-md-3">
-                    <img class="img-responsive rounded" src="{{asset('mkd_design/assets/images/adult-attractive-beautiful-457701.jpg')}}" alt="">
+                    <img class="img-responsive rounded mb-3" src="{{asset('mkd_design/assets/images/adult-attractive-beautiful-457701.jpg')}}" alt="">
 
                 </div>
                 <div class="col-md-3">
-                    <img class="img-responsive rounded" src="{{asset('mkd_design/assets/images/adult-attractive-beautiful-457701.jpg')}}" alt="">
+                    <img class="img-responsive rounded " src="{{asset('mkd_design/assets/images/adult-attractive-beautiful-457701.jpg')}}" alt="">
 
                 </div>
 
@@ -502,15 +502,15 @@
         </div>
         <div class="row">
                     <div class="col-md-3">
-                            <img class="img-responsive rounded" src="{{asset('mkd_design/assets/images/adult-attractive-beautiful-457701.jpg')}}" alt="">
+                            <img class="img-responsive rounded mb-3" src="{{asset('mkd_design/assets/images/adult-attractive-beautiful-457701.jpg')}}" alt="">
 
                     </div>
                     <div class="col-md-3">
-                            <img class="img-responsive rounded" src="{{asset('mkd_design/assets/images/adult-attractive-beautiful-457701.jpg')}}" alt="">
+                            <img class="img-responsive rounded mb-3" src="{{asset('mkd_design/assets/images/adult-attractive-beautiful-457701.jpg')}}" alt="">
 
                     </div>
                     <div class="col-md-3">
-                            <img class="img-responsive rounded" src="{{asset('mkd_design/assets/images/adult-attractive-beautiful-457701.jpg')}}" alt="">
+                            <img class="img-responsive rounded mb-3" src="{{asset('mkd_design/assets/images/adult-attractive-beautiful-457701.jpg')}}" alt="">
 
                     </div>
                     <div class="col-md-3 hovereffect">

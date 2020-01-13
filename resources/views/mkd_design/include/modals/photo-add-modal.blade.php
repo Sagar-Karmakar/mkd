@@ -12,12 +12,15 @@
             <!-- Modal body -->
             <div class="modal-body">
                 <form action="">
-                
+
+                    <div class="input-group mb-3">
                         <div class="custom-file">
-                            <input type="file" name="photo" class="custom-file-input" id="customFile">
-                            <label class="custom-file-label" for="customFile">Choose file</label>
+                            <input type="file" class="custom-file-input" id="mkd-upload"/>
+                            <label class="custom-file-label" for="mkd-upload">Choose file</label>
                         </div>
-                        <div class="form-group col-md-2">
+                    </div>
+
+                            <div class="form-group col-md-2">
                             <label for="inputTitle">Title</label>
                             <input type="text" class="form-control" name="title-picture" id="inputTitle" >
                             <p class="error-message">{{ $errors->first('title-picture') }}</p>

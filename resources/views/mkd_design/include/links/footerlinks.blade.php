@@ -9,8 +9,8 @@
 <script src=" {{asset('mkd_design/assets/js/lightbox-plus-jquery.min.js')}} "></script>
 
 {{-- bootstrap js 4.3 --}}
-{{-- <script src="{{asset('mkd_design/assets/js/bootstrap.min.js')}}"></script> --}}
-{{-- jquery minified --}}
+{{-- <script src="{{asset('mkd_design/assets/js/bootstrap.min.js')}}"></script>  --}}
+{{-- jquery minified}}
 
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 {{-- javascript --}}

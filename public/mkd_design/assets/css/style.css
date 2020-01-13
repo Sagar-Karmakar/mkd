@@ -260,11 +260,11 @@ color: #E6255F;
         Artist Profile
     _______________ */
 
-    .artist-banner {
+    /* .artist-banner {
         height: 20.71em;
-    }
+    } */
 
-    .artist-img {
+    .profile-img {
         height: 13.6em;
         width: 100%;
     }
@@ -272,7 +272,7 @@ color: #E6255F;
     .profile-gallery-img {
         height: 14em;
         width: 14em;
-        padding-bottom: 14%;
+        padding-bottom: 3%;
     }
 
     .user-photo {
@@ -376,6 +376,11 @@ color: #E6255F;
                 padding: 1% 8.69%;
         }
 
+
+        .artist-banner {
+            height: 20.71em;
+        }
+
         /* ==============
             Sign Up
         ============== */
@@ -425,10 +430,27 @@ color: #E6255F;
         }
         img {
                 /* margin-top: 1rem; */
-                margin-bottom: 2rem;
+                /* margin-bottom: 2rem; */
+        }
+        /* artis profile */
+        .change-picture-link {
+
+            top: 43.6%;
+            left: 83%;
+            font-size: 0.8rem;
+        }
+        .profile-gallery-img {
+            height: 7em;
+            width: 14em;
+            padding-left: 0.2rem;
+            /* padding-bottom: 3%; */
         }
 
+        /* Home Page */
+        .user-benefit, .showcase-area  {
+            padding: 0% 4.9%;
 
+        }
         /* .user-benefit .work-image img {
         height: 14em;
         width: 16.4em;
