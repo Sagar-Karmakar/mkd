@@ -55,7 +55,7 @@
                             @foreach ($users as $user)
                             <div class="col-md-4">
                                 <div class="card mkd-card">
-                                <img class="img-responsive rounded" class="card-img-top " src="{{asset('storage/artist/profile_picture/'.$user->profile_picture)}}" alt="">
+                                <img class="img-responsive rounded" class="card-img-top " src="{{asset($user->profile_picture)}}" alt="">
                                     <div class="card-footer mkd-card-footer">
                                         <p class="p-0">Artist : <span><a href="/profile/{{$user->user_name}}">{{$user->name}}</a></span></p>
                                         <h6 class="">Bridal makeup, party makeUp</h6>

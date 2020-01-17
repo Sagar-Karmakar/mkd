@@ -53,9 +53,9 @@ Route::get('/bookings', function () {
 });
 
 // Artist booking blade
-Route::get('/book/now', function () {
-    return view('mkd_design.pages.user.book-now');
-});
+Route::get('/book/now/{user_name}', 'Users\BookingController@BookNow')->name('book.now');
+Route::post('/book/now', 'Users\BookingController@Booked')->name('booked');
+Route::post('/book/cancel/{user_name}', 'Users\BookingController@UserCancel')->name('cancel.user');
 
 
 Route::get('/register', 'Users\AuthController@RegistrationIndex')->name('register.index');

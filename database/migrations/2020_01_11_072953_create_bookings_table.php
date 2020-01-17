@@ -17,6 +17,7 @@ class CreateBookingsTable extends Migration
             $table->bigIncrements('id');
             $table->string('artist_user_name');
             $table->string('user_user_name');
+            $table->string('full_name');
             $table->string('bookings_coupon')->unique();
             $table->bigInteger('phone_number');
             $table->string('makeup_type');

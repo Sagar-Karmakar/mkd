@@ -267,12 +267,14 @@ color: #E6255F;
     .profile-img {
         height: 13.6em;
         width: 100%;
+        object-fit:contain;
     }
 
     .profile-gallery-img {
         height: 14em;
         width: 14em;
         padding-bottom: 3%;
+        object-fit:cover;
     }
 
     .user-photo {
@@ -379,6 +381,7 @@ color: #E6255F;
 
         .artist-banner {
             height: 20.71em;
+            object-fit:contain;
         }
 
         /* ==============

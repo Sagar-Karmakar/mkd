@@ -5,7 +5,9 @@ namespace App\Http\Controllers\Users;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\User;
+use App\Login;
 use App\Image;
+use App\Booking;
 use ImageOptimizer;
 use Illuminate\Support\Facades\Storage;
 
@@ -30,9 +32,10 @@ class ProfileController extends Controller
      */
     public function show($user_name)
     {
+        $user_name_session = \Session::get('user_name');
+        $booking = Booking::where("user_user_name",$user_name_session)->where("artist_user_name", $user_name)->orderBy('id', 'desc')->first();
         $user = User::where('user_name', $user_name)->first();
-        $user_name = \Session::get('user_name');
-        return view('mkd_design.pages.artist.artist-profile',compact('user','user_name'));
+        return view('mkd_design.pages.artist.artist-profile',compact('user','user_name_session','booking'));
     }
 
     /**
@@ -123,17 +126,17 @@ class ProfileController extends Controller
     public function ProfilePic(Request $request, $user_name)
     {
         $this->validate($request, [
-        'photo'  => 'required|image|mimes:jpeg,png,jpg|max:2048'
+            'photo'  => 'required|image|mimes:jpeg,png,jpg|max:2048'
         ]);
         $user = User::where('user_name', $user_name)->first();
         if ($user_name === \Session::get('user_name')) {
             if ($request->file('photo')->isValid()) {
                 $extension = $request->photo->extension();
                 $name=time() . '.' .$extension;
-                $directory = 'public/artist/'.$user_name.'/'.'profile_picture/';
+                $directory = 'public/artist/'.$user_name.'/';
                     if(!is_dir($directory)){Storage::makeDirectory($directory);}
                 $request->photo->storeAs($directory, $name);
-                $dp = 'storage/artist/'.$user_name.'/'.'profile_picture/'.$name;
+                $dp = 'storage/artist/'.$user_name.'/'.$name;
             }
             else {
                 \Session::flash('message', "Sorry your photo is not validate");
@@ -162,10 +165,10 @@ class ProfileController extends Controller
                 if ($request->file('photo')->isValid()) {
                     $extension = $request->photo->extension();
                     $name=time() . '.' .$extension;
-                    $directory = 'public/artist/'.$user_name.'/'.'cover_picture/';
+                    $directory = 'public/artist/'.$user_name.'/';
                         if(!is_dir($directory)){Storage::makeDirectory($directory);}
                     $request->photo->storeAs($directory, $name);
-                    $dp = 'storage/artist/'.$user_name.'/'.'cover_picture/'.$name;
+                    $dp = 'storage/artist/'.$user_name.'/'.$name;
                 }
                 else {
                     \Session::flash('message', "Sorry your photo is not validate");

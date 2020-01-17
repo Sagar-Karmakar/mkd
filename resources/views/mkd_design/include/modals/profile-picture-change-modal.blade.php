@@ -15,7 +15,7 @@
                 {{ csrf_field() }}
                 <div class="input-group mb-3">
                     <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="mkd-upload"/>
+                        <input type="file" name="photo" class="custom-file-input" id="mkd-upload"/>
                         <label class="custom-file-label" for="mkd-upload">Choose file</label>
                     </div>
 

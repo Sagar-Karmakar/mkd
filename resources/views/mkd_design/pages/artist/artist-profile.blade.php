@@ -13,16 +13,10 @@
         <div class="col-md-4">
             <div class="card mb-4">
                 <div class="card-img-top">
-                    <img class="img-responsive img-fluid profile-img" class="card-img-top"
-                            @if (is_null($user->profile_picture))
-                            src="{{asset('storage/artist/profile_picture/profile.png')}}"
-                            @else
-                            src="{{asset($user->profile_picture)}}"
-                            @endif
-                    alt="profile picture ">
-                    @if ($user->user_name === $user_name)
+                    <img class="img-responsive img-fluid profile-img" class="card-img-top" src="{{asset($user->profile_picture)}}" alt="profile picture ">
+                    @if ($user->user_name === \Session::get('user_name'))
                     <a href="#" class="change-picture-link px-2"  data-toggle="modal" data-target="#pictureChange">Edit <i class="fas fa-edit"></i></a>
-                    @include('mkd_design.include.modals.profile-picture-change-modal',[$user])
+                    @include('mkd_design.include.modals.cover-picture-change-modal',[$user])
                     @endif
                 </div>
                     <div class="card-body">
@@ -43,9 +37,37 @@
                         </div>
                             {{-- book and messege --}}
                             <div class="d-flex flex-row mt-2">
-                                <a href="#" class="btn px-xm-2 px-lg-4 mr-4 text-white mkd-btn mkd-btn-active mr-2">Book now</a>
-                                <a href="#" class="btn px-xm-2 px-lg-4 mr-4 mkd-btn-inactive ">Messege</a>
-                                <a href="#"><h3><i class="fa fa-share-alt light-text" aria-hidden="true"></i></h3></a>
+                                @if ($user->user_name != \Session::get('user_name') AND !is_null($booking))
+                                    @if ($booking->bookings_status=="request")
+                                        <a class="btn px-xm-2 px-lg-4 mr-4 mr-2" >Pending...</a>
+                                        <form action="{{route('cancel.user',\Session::get('user_name'))}}" method="POST">
+                                            @csrf
+                                            <input type="hidden" name="artist_user_name" value="{{$user->user_name}}">
+                                            <button type="submit" class="btn px-xm-2 px-lg-4 mr-4 mkd-btn-inactive ">Cancel</button>
+                                        </form>
+                                        <a href="#"><h3><i class="fa fa-share-alt light-text" aria-hidden="true"></i></h3></a>
+                                    @elseif ($booking->bookings_status=="cancel")
+                                        <a class="btn px-xm-2 px-lg-4 mr-4 mr-2">Rejected...</a>
+                                        <form action="{{route('cancel.user',\Session::get('user_name'))}}" method="POST">
+                                            @csrf
+                                            <input type="hidden" name="artist_user_name" value="{{$user->user_name}}">
+                                            <button type="submit" class="btn px-xm-2 px-lg-4 mr-4 mkd-btn-inactive ">Ok</button>
+                                        </form>
+                                        <a href="#"><h3><i class="fa fa-share-alt light-text" aria-hidden="true"></i></h3></a>
+                                    @elseif ($booking->bookings_status=="accept")
+                                        <a class="btn px-xm-2 px-lg-4 mr-4 mr-2">Accepted...</a>
+                                        <a href="#" class="btn px-xm-2 px-lg-4 mr-4 mkd-btn-inactive ">Message</a>
+                                        <a href="#"><h3><i class="fa fa-share-alt light-text" aria-hidden="true"></i></h3></a>
+                                    @else
+                                        <a href="{{route('book.now',$user->user_name)}}" class="btn px-xm-2 px-lg-4 mr-4 text-white mkd-btn mkd-btn-active mr-2">Book now</a>
+                                        <a class="btn px-xm-2 px-lg-4 mr-4 mkd-btn-inactive " aria-disabled="true">Messege</a>
+                                        <a href="#"><h3><i class="fa fa-share-alt light-text" aria-hidden="true"></i></h3></a>
+                                    @endif
+                                @elseif ($user->user_name != \Session::get('user_name'))
+                                    <a href="{{route('book.now',$user->user_name)}}" class="btn px-xm-2 px-lg-4 mr-4 text-white mkd-btn mkd-btn-active mr-2">Book now</a>
+                                    <a class="btn px-xm-2 px-lg-4 mr-4 mkd-btn-inactive " aria-disabled="true">Messege</a>
+                                    <a href="#"><h3><i class="fa fa-share-alt light-text" aria-hidden="true"></i></h3></a>
+                                @endif
                             </div>
 
                             {{-- <hr class="d-block d-md-none"> --}}
@@ -90,7 +112,7 @@
                             <h4 class="">Pricing</h4>
                         </div>
                             <div class=" mt-1">
-                                @if ($user->user_name === $user_name)
+                                @if ($user->user_name === \Session::get('user_name'))
                                 <a href="/pricing/edit" class="change-pricing px-2">Edit <i class="fas fa-edit"></i></a>
                                 @endif
                             </div>
@@ -137,14 +159,8 @@
         {{-- /.col --}}
             <div class="col-md-8">
                     <div class="card mb-4 d-none d-md-block">
-                        <img class="img-fluid card-img-top artist-banner"
-                                    @if (is_null($user->cover_picture))
-                                    src="{{asset('storage/artist/cover_picture/cover.png')}}"
-                                    @else
-                                    src="{{asset($user->cover_picture)}}"
-                                    @endif
-                        alt="cover picture">
-                        @if ($user->user_name === $user_name)
+                        <img class="img-fluid card-img-top artist-banner" src="{{asset($user->cover_picture)}}" alt="cover picture">
+                        @if ($user->user_name === \Session::get('user_name'))
                         <a href="#" class="change-cover-picture-link px-2" data-toggle="modal" data-target="#pictureChange">Edit <i class="fas fa-edit"></i></a>
                         @include('mkd_design.include.modals.cover-picture-change-modal',[$user])
                         @endif
@@ -311,14 +327,11 @@
                                 <hr>
                             </div>
                             {{-- /. review --}}
-
+                @if ($user->user_name != \Session::get('user_name') AND !is_null($booking))
+                    @if ($booking->bookings_status=="complete" AND is_null($booking->review) AND is_null($booking->star))
                             {{-- Write a review --}}
-
                             <h5>Write a review</h5>
-
-
                             <section class='rating-widget'>
-
                                 <!-- Rating Stars Box -->
                                 <div class='rating-stars mt-3'>
                                     <ul id='stars'>
@@ -339,23 +352,19 @@
                                     </li>
                                     </ul>
                                 </div>
-
                                 <div class='success-box my-2'>
                                     <div class='clearfix'></div>
-
                                     <div class='text-message'></div>
                                     <div class='clearfix'></div>
                                 </div>
-
-
-
                             </section>
-
                                 <div class="form-group">
                                     {{-- <label for="comment">Comment:</label> --}}
                                     <textarea class="form-control" rows="5" id="comment" placeholder="write a review"></textarea>
                                 </div>
                                 <button type="submit" class="btn btn-outline-success">Submit</button>
+                    @endif
+                @endif
 
 
 

@@ -45,6 +45,8 @@ class AuthController extends Controller
             $user->user_name = $user_name;
             $user->email = $email;
             $user->gender = "female";
+            $user->profile_picture = "mkd_design/assets/images/logo/favicon.png";
+            $user->cover_picture = "mkd_design/assets/images/logo/logo.png";
             $user->account_type = $account_type;
             $user->save();
             $login = new Login();
@@ -96,6 +98,8 @@ class AuthController extends Controller
             $user->user_name = $user_name;
             $user->email = $email;
             $user->gender = "female";
+            $user->profile_picture = "mkd_design/assets/images/logo/favicon.png";
+            $user->cover_picture = "mkd_design/assets/images/logo/logo.png";
             $user->account_type = $account_type;
             $user->save();
             $login = new Login();
@@ -214,6 +218,7 @@ class AuthController extends Controller
             $user->provider_id = $provider_id;
             $user->gender = "female";
             $user->profile_picture = $avatar;
+            $user->cover_picture = "mkd_design/assets/images/logo/logo.png";
             $user->account_type = $account_type;
             $user->save();
             \Session::flash('message', "Account has been created");
