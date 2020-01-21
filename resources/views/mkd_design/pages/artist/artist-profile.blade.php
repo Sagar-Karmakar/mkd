@@ -113,7 +113,7 @@
                         </div>
                             <div class=" mt-1">
                                 @if ($user->user_name === \Session::get('user_name'))
-                                <a href="/pricing/edit" class="change-pricing px-2">Edit <i class="fas fa-edit"></i></a>
+                                <a href="/pricing/{{$user->user_name}}/edit" class="change-pricing px-2">Edit <i class="fas fa-edit"></i></a>
                                 @endif
                             </div>
                     </div>

@@ -23,7 +23,7 @@ class PriceController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function edit()
+    public function create()
     {
         return view('mkd_design.pages.artist.add-pricing');
     }
@@ -66,7 +66,7 @@ class PriceController extends Controller
      * @param  \App\Price  $price
      * @return \Illuminate\Http\Response
      */
-    public function editanything($price)
+    public function edit($price)
     {
         if ($price === \Session::get('user_name')) {
             $makeup = Price::where('user_name',$price)->first();
