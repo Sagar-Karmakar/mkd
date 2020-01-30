@@ -54,314 +54,52 @@
         {{-- artis booking row started --}}
 
                 <div class="artist-img row mb-4">
+
+                    @foreach ($artists as $artist)
                     <div class="col-md-3">
                     <div class="card mkd-card">
-
-
-                        <img class="img-responsive rounded" class="card-img-top " src="{{asset('mkd_design/assets/images/adult-attractive-beautiful-457701.jpg')}}" alt="">
+                        <img class="img-responsive rounded" class="card-img-top " src="{{asset($artist['profile_picture'])}}" alt="">
                             <div class="card-footer mkd-card-footer">
-                                <p class="p-0">Artist : <span><a href="#">Arpita Manna</a></span></p>
-                                <h6 class="">Bridal makeup, party makeUp</h6>
+                                <p class="p-0">Artist : <span><a href="#">{{ $artist['name'] }}</a></span></p>
+                                <h6 class="">
+                                    @foreach ($artist['makeup_type'] as $item)
+                                        {{ $item->makeup_type }},
+                                    @endforeach
+                                </h6>
                                 <div class="d-flex flex-row justify-content-between review">
                                 <div class="pt-2">
-                                    <h6 class="text-info">1000$</h6>
+                                    <h6 class="text-info">Started from :
+                                    @if (is_null($artist['price']))
+                                        0 ₹
+                                    @else
+                                        {{ $artist['price'] }} ₹
+                                    @endif
+                                    </h6>
 
                                 </div>
                                 <div class="mt-1 star-icons">
+                                @if ($artist['count'] == 0)
+                                    0
+                                @else
+                                    {{ ceil($artist['star']/$artist['count']) }}
+                                @endif
                                     <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star-half-alt"></i>
                                 </div>
 
                             </div>
                             <!-- /.clearfix -->
 
-                            <a href="#" class="btn btn-block mt-2 btn-sm mkd-btn text-white">Book Now</></a>
+                            <a href="{{route('book.now',$artist['user_name'])}}" class="btn btn-block mt-2 btn-sm mkd-btn text-white">Book Now</></a>
 
                             {{-- visit profile --}}
-                            <a href="#"><p class="text-center mt-1"><i class="far fa-eye"></i> Visit profile</p></a>
+                            <a href="/profile/{{$artist['user_name']}}"><p class="text-center mt-1"><i class="far fa-eye"></i> Visit profile</p></a>
                             </div>
                             <!-- /.card-footer -->
-
                     </div>
                     <!-- /.card -->
                     </div>
                     <!-- /.col -->
-
-                    <div class="col-md-3">
-                    <div class="card mkd-card ">
-
-
-                        <img class="img-responsive rounded" class="card-img-top " src="{{asset('mkd_design/assets/images/adult-attractive-beautiful-457701.jpg')}}"  class="img-responsive rounded"  alt="">
-
-                        <div class="card-footer mkd-card-footer">
-                            <p class="p-0">Artist : <span><a href="#">Arpita Manna</a></span></p>
-                            <h6 class="">Bridal makeup, party makeUp</h6>
-                            <div class="d-flex flex-row justify-content-between review">
-                                <div class="pt-2">
-                                    <h6 class="text-info">1000$</h6>
-
-                                </div>
-                                <div class="mt-1 star-icons">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star-half-alt"></i>
-                                </div>
-
-                            </div>
-                            <!-- /.clearfix -->
-
-                            <a href="#" class="btn btn-block mt-2 btn-sm mkd-btn text-white">Book Now</></a>
-
-                            {{-- visit profile --}}
-                            <a href="#"><p class="text-center mt-1"><i class="far fa-eye"></i> Visit profile</p></a>
-                            </div>
-                            <!-- /.card-footer -->
-
-                    </div>
-                    <!-- /.card -->
-
-                    </div>
-                    <!-- /.col -->
-
-                    <div class="col-md-3">
-                    <div class="card mkd-card">
-
-
-                        <img class="img-responsive rounded"  class="card-img-top "  src="{{asset('mkd_design/assets/images/adult-attractive-beautiful-457701.jpg')}}" class=" img-responsive rounded"  alt="">
-                        <div class="card-footer mkd-card-footer">
-                            <p class="p-0">Artist : <span><a href="#">Arpita Manna</a></span></p>
-                            <h6 class="">Bridal makeup, party makeUp</h6>
-                                <div class="d-flex flex-row justify-content-between review">
-                                <div class="pt-2">
-                                    <h6 class="text-info">1000$</h6>
-
-                                </div>
-                                <div class="mt-1 star-icons">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star-half-alt"></i>
-                                </div>
-
-                            </div>
-                            <!-- /.clearfix -->
-
-                            <a href="#" class="btn btn-block mt-2 btn-sm mkd-btn text-white">Book Now</></a>
-
-                            {{-- visit profile --}}
-                            <a href="#"><p class="text-center mt-1"><i class="far fa-eye"></i> Visit profile</p></a>
-                            </div>
-                            <!-- /.card-footer -->
-
-                    </div>
-                    <!-- /.card -->
-
-                    </div>
-                    <!-- /.col -->
-
-                    <div class="col-md-3">
-                    <div class="card mkd-card">
-
-
-                        <img class="img-responsive rounded" class="card-img-top "  src="{{asset('mkd_design/assets/images/adult-attractive-beautiful-457701.jpg')}}" class=" img-responsive rounded"  alt="">
-
-                        <div class="card-footer mkd-card-footer">
-                            <p class="p-0">Artist : <span><a href="#">Arpita Manna</a></span></p>
-                            <h6 class="">Bridal makeup, party makeUp</h6>
-                            <div class="d-flex flex-row justify-content-between review">
-                                <div class="pt-2">
-                                    <h6 class="text-info">1000$</h6>
-
-                                </div>
-                                <div class="mt-1 star-icons">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star-half-alt"></i>
-                                </div>
-
-                            </div>
-                            <!-- /.clearfix -->
-
-                            <a href="#" class="btn btn-block mt-2 btn-sm mkd-btn text-white">Book Now</></a>
-
-                            {{-- visit profile --}}
-                            <a href="#"><p class="text-center mt-1"><i class="far fa-eye"></i> Visit profile</p></a>
-                            </div>
-                            <!-- /.card-footer -->
-
-                        </div>
-                        <!-- /.card -->
-
-                        </div>
-                    <!-- /.col -->
-
-                    </div>
-                    <!-- /.artist-img row-->
-
-                    {{-- 2nd ROW started --}}
-
-                    <div class="artist-img row mt-4">
-                                <div class="col-md-3">
-                                <div class="card mkd-card">
-
-
-                                <img class="img-responsive rounded" class="card-img-top " src="{{asset('mkd_design/assets/images/adult-attractive-beautiful-457701.jpg')}}" alt="">
-                                <div class="card-footer mkd-card-footer">
-                                    <p class="p-0">Artist : <span><a href="#">Arpita Manna</a></span></p>
-                                    <h6 class="">Bridal makeup, party makeUp</h6>
-                                    <div class="d-flex flex-row justify-content-between review">
-                                        <div class="pt-2">
-                                                <h6 class="text-info">1000$</h6>
-
-                                        </div>
-                                        <div class="mt-1 star-icons">
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star-half-alt"></i>
-                                        </div>
-
-                                    </div>
-
-                                    <a href="#" class="px-4 btn btn-block mt-2 btn-sm mkd-btn text-white">Book Now</></a>
-
-
-                                {{-- visit profile --}}
-                                    <a href="#"><p class="text-center mt-1"><i class="far fa-eye"></i> Visit profile</p></a>
-
-
-
-
-                                    </div>
-                                    <!-- /.card-footer -->
-
-                            </div>
-                            <!-- /.card -->
-                            </div>
-                            <!-- /.col -->
-
-                            <div class="col-md-3">
-                            <div class="card mkd-card ">
-
-
-                            <img class="img-responsive rounded" class="card-img-top " src="{{asset('mkd_design/assets/images/adult-attractive-beautiful-457701.jpg')}}"  class="img-responsive rounded"  alt="">
-
-                            <div class="card-footer mkd-card-footer">
-                                    <p class="p-0">Artist : <span><a href="#">Arpita Manna</a></span></p>
-                                    <h6 class="">Bridal makeup, party makeUp</h6>
-                                    <div class="d-flex flex-row justify-content-between review">
-                                        <div class="pt-2">
-                                            <h6 class="text-info">1000$</h6>
-
-                                        </div>
-                                        <div class="mt-1 star-icons">
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star-half-alt"></i>
-                                        </div>
-
-                                    </div>
-                                    <!-- /.clearfix -->
-
-                                    <a href="#" class="btn btn-block mt-2 btn-sm mkd-btn text-white">Book Now</></a>
-
-                                    {{-- visit profile --}}
-                                    <a href="#"><p class="text-center mt-1"><i class="far fa-eye"></i> Visit profile</p></a>
-                                    </div>
-                                    <!-- /.card-footer -->
-
-                            </div>
-                            <!-- /.card -->
-
-                            </div>
-                            <!-- /.col -->
-
-                            <div class="col-md-3">
-                            <div class="card mkd-card">
-
-
-                            <img class="img-responsive rounded"  class="card-img-top "  src="{{asset('mkd_design/assets/images/adult-attractive-beautiful-457701.jpg')}}" class=" img-responsive rounded"  alt="">
-                            <div class="card-footer mkd-card-footer">
-                                <p class="p-0">Artist : <span><a href="#">Arpita Manna</a></span></p>
-                                <h6 class="">Bridal makeup, party makeUp</h6>
-                                <div class="d-flex flex-row justify-content-between review">
-                                        <div class="pt-2">
-                                            <h6 class="text-info">1000$</h6>
-
-                                        </div>
-                                        <div class="mt-1 star-icons">
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star-half-alt"></i>
-                                        </div>
-
-                                    </div>
-                                    <!-- /.clearfix -->
-
-                                    <a href="#" class="btn btn-block mt-2 btn-sm mkd-btn text-white">Book Now</></a>
-
-                                    {{-- visit profile --}}
-                                    <a href="#"><p class="text-center mt-1"><i class="far fa-eye"></i> Visit profile</p></a>
-                                    </div>
-                                    <!-- /.card-footer -->
-
-                            </div>
-                            <!-- /.card -->
-
-                            </div>
-                            <!-- /.col -->
-
-                            <div class="col-md-3">
-                            <div class="card mkd-card">
-
-
-                            <img class="img-responsive rounded" class="card-img-top "  src="{{asset('mkd_design/assets/images/adult-attractive-beautiful-457701.jpg')}}" class=" img-responsive rounded"  alt="">
-
-                            <div class="card-footer mkd-card-footer">
-                                <p class="p-0">Artist : <span><a href="#">Arpita Manna</a></span></p>
-                                <h6 class="">Bridal makeup, party makeUp</h6>
-                                <div class="d-flex flex-row justify-content-between review">
-                                <div class="pt-2">
-                                        <h6 class="text-info">1000$</h6>
-
-                                </div>
-                                <div class="mt-1 star-icons">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star-half-alt"></i>
-                                </div>
-
-                                </div>
-                                <!-- /.clearfix -->
-
-                                <a href="#" class="btn btn-block mt-2 btn-sm mkd-btn text-white">Book Now</></a>
-
-                                {{-- visit profile --}}
-                                <a href="#"><p class="text-center mt-1"><i class="far fa-eye"></i> Visit profile</p></a>
-                            </div>
-                            <!-- /.card-footer -->
-
-                            </div>
-                            <!-- /.card -->
-
-                            </div>
-                    <!-- /.col -->
-
+                    @endforeach
                 </div>
                 <!-- /.artist-img row-->
                 {{-- go to artists list --}}
@@ -435,38 +173,40 @@
 
         <div class="col-md-2"></div>
 
+        @if (is_null(Session::get('user_name')))
         <div class="col-md-4 ">
 
-                {{-- sign Up --}}
-                <div class="card mkd-card p-4">
-                    <h4 class="mkd-text">Sign Up to get your perfect look</h4>
-                    <form method="POST" action="{{route('user.register.submit')}}">
-                        @csrf
-                            <div class="form-group">
-                                <input type="name" class="form-control" name="name"  placeholder="Your Name">
-                                <p class="error-message">{{ $errors->first('name') }}</p>
-                            </div>
-                            <div class="form-group">
-                                <input type="email" class="form-control" name="email"  placeholder="Enter email">
-                                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-                                <p class="error-message">{{ $errors->first('email') }}</p>
-                            </div>
-                            <div class="form-group">
-                                <input type="password" class="form-control" name="password"  placeholder="Password">
-                            </div>
-                            <div class="form-group">
-                                <input type="password" class="form-control" name="password_confirmation"  placeholder="Confirm Password">
-                                <p class="error-message">{{ $errors->first('password') }}</p>
-                            </div>
-                            <div class="form-check">
-                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                            </div>
-                            <button type="submit" class="btn mkd-btn text-white btn-block mt-1">Submit</button>
-                    </form>
-                </div>
-        </div>
-        <!-- /.col -->
+            {{-- sign Up --}}
+            <div class="card mkd-card p-4">
+                <h4 class="mkd-text">Sign Up to get your perfect look</h4>
+                <form method="POST" action="{{route('user.register.submit')}}">
+                    @csrf
+                        <div class="form-group">
+                            <input type="name" class="form-control" name="name"  placeholder="Your Name">
+                            <p class="error-message">{{ $errors->first('name') }}</p>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" name="email"  placeholder="Enter email">
+                            <small id="emailHelp" class="form-text text-muted">We will never share your email with anyone else.</small>
+                            <p class="error-message">{{ $errors->first('email') }}</p>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" name="password"  placeholder="Password">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" name="password_confirmation"  placeholder="Confirm Password">
+                            <p class="error-message">{{ $errors->first('password') }}</p>
+                        </div>
+                        {{-- <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                        </div> --}}
+                        <button type="submit" class="btn mkd-btn text-white btn-block mt-1">Submit</button>
+                </form>
+            </div>
+    </div>
+    <!-- /.col -->
+        @endif
 
 
     </div>
@@ -480,46 +220,11 @@
 
     <div class="container-fluid showcase-area">
         <div class="row mb-4">
+            @foreach ($images as $item)
                 <div class="col-md-3">
-                    <img class="img-responsive rounded mb-3" src="{{asset('mkd_design/assets/images/adult-attractive-beautiful-457701.jpg')}}" alt="">
-
+                    <img class="img-responsive rounded mb-3" src="{{asset($item->image)}}" alt="">
                 </div>
-                <div class="col-md-3">
-                    <img class="img-responsive rounded mb-3" src="{{asset('mkd_design/assets/images/adult-attractive-beautiful-457701.jpg')}}" alt="">
-
-                </div>
-                <div class="col-md-3">
-                    <img class="img-responsive rounded mb-3" src="{{asset('mkd_design/assets/images/adult-attractive-beautiful-457701.jpg')}}" alt="">
-
-                </div>
-                <div class="col-md-3">
-                    <img class="img-responsive rounded " src="{{asset('mkd_design/assets/images/adult-attractive-beautiful-457701.jpg')}}" alt="">
-
-                </div>
-
-
-
-        </div>
-        <div class="row">
-                    <div class="col-md-3">
-                            <img class="img-responsive rounded mb-3" src="{{asset('mkd_design/assets/images/adult-attractive-beautiful-457701.jpg')}}" alt="">
-
-                    </div>
-                    <div class="col-md-3">
-                            <img class="img-responsive rounded mb-3" src="{{asset('mkd_design/assets/images/adult-attractive-beautiful-457701.jpg')}}" alt="">
-
-                    </div>
-                    <div class="col-md-3">
-                            <img class="img-responsive rounded mb-3" src="{{asset('mkd_design/assets/images/adult-attractive-beautiful-457701.jpg')}}" alt="">
-
-                    </div>
-                    <div class="col-md-3 hovereffect">
-                            <img class="img-responsive rounded" src="{{asset('mkd_design/assets/images/adult-attractive-beautiful-457701.jpg')}}" alt="">
-                    </div>
-
-
-
-
+            @endforeach
         </div>
         {{-- /.row --}}
     </div>
